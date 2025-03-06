@@ -1,5 +1,5 @@
 
-import { Monitor, PenTool, BookOpen, BarChart } from "lucide-react";
+import { Monitor, BookOpen, BarChart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -10,16 +10,12 @@ const services = [
     link: "/services#web-creation"
   },
   {
-    icon: <PenTool className="w-10 h-10 mb-4 text-gold" />,
-    title: "Design UI/UX",
-    description: "Interfaces utilisateur intuitives et esthétiques pour une expérience utilisateur optimale.",
-    link: "/services#design"
-  },
-  {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
     title: "Formation web",
     description: "Formations personnalisées pour maîtriser les outils web et gérer votre présence en ligne.",
-    link: "/services#training"
+    link: "https://www.example.com/formations",
+    external: true,
+    soon: true
   },
   {
     icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
@@ -45,7 +41,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -55,13 +51,25 @@ const Services = () => {
               {service.icon}
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-5">{service.description}</p>
-              <Link 
-                to={service.link} 
-                className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
-              >
-                <span>En savoir plus</span>
-                <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
+              {service.external ? (
+                <a 
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
+                >
+                  <span>{service.soon ? "Bientôt disponible" : "En savoir plus"}</span>
+                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+              ) : (
+                <Link 
+                  to={service.link} 
+                  className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
+                >
+                  <span>En savoir plus</span>
+                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              )}
             </div>
           ))}
         </div>

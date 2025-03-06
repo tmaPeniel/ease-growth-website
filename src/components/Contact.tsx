@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Send, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Send, Phone, Mail, CheckCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -54,12 +54,6 @@ const Contact = () => {
       title: "Email",
       details: "contact@easegrowth.fr",
       link: "mailto:contact@easegrowth.fr"
-    },
-    {
-      icon: <MapPin className="w-5 h-5 text-gold" />,
-      title: "Adresse",
-      details: "123 Avenue de la Croissance, 75008 Paris",
-      link: "https://maps.google.com"
     }
   ];
 
@@ -80,14 +74,12 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="animate-on-scroll">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
               {contactInfo.map((item, index) => (
                 <a 
                   key={index} 
                   href={item.link} 
                   className="p-6 glass-card rounded-xl hover:shadow-gold transition-all duration-300 no-underline text-current"
-                  rel={item.title === "Adresse" ? "noopener noreferrer" : undefined}
-                  target={item.title === "Adresse" ? "_blank" : undefined}
                 >
                   <div className="flex flex-col items-center text-center">
                     <div className="p-3 bg-gold/10 rounded-full mb-4">
@@ -193,7 +185,6 @@ const Contact = () => {
                     >
                       <option value="">Sélectionnez un sujet</option>
                       <option value="Création de site web">Création de site web</option>
-                      <option value="Design UI/UX">Design UI/UX</option>
                       <option value="Formation">Formation</option>
                       <option value="Marketing digital">Marketing digital</option>
                       <option value="Autre">Autre</option>

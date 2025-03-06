@@ -1,6 +1,6 @@
 
 import Layout from "../components/Layout";
-import { Monitor, PenTool, BookOpen, BarChart, Users, Code, Database, Search } from "lucide-react";
+import { Monitor, BookOpen, BarChart, Users, Code, Database, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
@@ -19,19 +19,6 @@ const ServicesPage = () => {
       ]
     },
     {
-      id: "design",
-      icon: <PenTool className="w-12 h-12 mb-6 text-gold" />,
-      title: "Design UI/UX",
-      description: "Des interfaces utilisateur esthétiques et intuitives qui engagent vos visiteurs et améliorent leur expérience.",
-      features: [
-        "Maquettes & prototypes",
-        "Design responsive",
-        "Identité visuelle",
-        "Tests utilisateurs",
-        "Optimisation de l'expérience"
-      ]
-    },
-    {
       id: "training",
       icon: <BookOpen className="w-12 h-12 mb-6 text-gold" />,
       title: "Formation web",
@@ -42,7 +29,10 @@ const ServicesPage = () => {
         "SEO fondamental",
         "Administration de site",
         "Marketing digital"
-      ]
+      ],
+      external: true,
+      externalLink: "https://www.example.com/formations",
+      soon: true
     },
     {
       id: "marketing",
@@ -141,12 +131,23 @@ const ServicesPage = () => {
                 </ul>
                 
                 <div className="text-center lg:text-left">
-                  <Link 
-                    to="/contact" 
-                    className="inline-block px-6 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full"
-                  >
-                    En savoir plus
-                  </Link>
+                  {service.external ? (
+                    <a 
+                      href={service.externalLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full"
+                    >
+                      {service.soon ? "Bientôt disponible" : "En savoir plus"}
+                    </a>
+                  ) : (
+                    <Link 
+                      to="/contact" 
+                      className="inline-block px-6 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full"
+                    >
+                      En savoir plus
+                    </Link>
+                  )}
                 </div>
               </div>
               
@@ -159,8 +160,7 @@ const ServicesPage = () => {
                   <img
                     src={`https://images.unsplash.com/photo-${
                       index === 0 ? '1460925895917-afdab827c52f' : 
-                      index === 1 ? '1542744095-fcf48f21aae9' : 
-                      index === 2 ? '1517245386807-bb43ffb1f7b2' : 
+                      index === 1 ? '1517245386807-bb43ffb1f7b2' : 
                       '1533750349088-cd871a92f8a7'
                     }?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80`}
                     alt={service.title}
