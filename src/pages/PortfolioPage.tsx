@@ -5,75 +5,30 @@ import Layout from "../components/Layout";
 const projects = [
   {
     id: 1,
-    title: "Site e-commerce Luxe",
-    category: "E-commerce",
-    client: "Luxury Brand",
-    year: "2023",
-    description: "Site e-commerce pour une marque de luxe avec une interface élégante et un parcours d'achat optimisé.",
+    title: "Site vitrine Agence Photo",
+    category: "Site Vitrine",
+    client: "C'EST DANS LA BOITE",
+    year: "2025",
+    description: "Site vitrine pour agence photo avec une interface élégante et un parcours d'achat optimisé.",
     image: "https://images.unsplash.com/photo-1492105254157-2291922b8b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
   },
   {
     id: 2,
-    title: "Application mobile Fintech",
-    category: "Application",
-    client: "Finance App",
-    year: "2023",
-    description: "Application mobile pour une startup fintech permettant de gérer ses investissements et suivre ses dépenses.",
+    title: "Site vitrine Agence de communication",
+    category: "Site Vitrine",
+    client: "YADAQ",
+    year: "2024",
+    description: "Site vitrine pour une agence de communication avec réservation en ligne et présentation des services.",
     image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
   },
   {
     id: 3,
-    title: "Site vitrine Restaurant",
-    category: "Site Vitrine",
-    client: "Gourmet Restaurant",
-    year: "2022",
-    description: "Site vitrine pour un restaurant gastronomique avec réservation en ligne et présentation des menus.",
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 4,
-    title: "Refonte site corporate",
-    category: "Site Corporate",
-    client: "Enterprise Inc.",
-    year: "2022",
-    description: "Refonte complète du site corporate d'une entreprise internationale pour améliorer son image de marque.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 5,
     title: "Plateforme e-learning",
-    category: "Application",
-    client: "EduTech",
-    year: "2022",
+    category: "E-Learning",
+    client: "Ease Growth Formation",
+    year: "2025",
     description: "Plateforme d'apprentissage en ligne avec système de cours, quiz et suivi de progression.",
     image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 6,
-    title: "Blog Mode & Lifestyle",
-    category: "Blog",
-    client: "Fashion Magazine",
-    year: "2021",
-    description: "Blog élégant pour un magazine de mode avec mise en avant des articles et optimisation SEO.",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 7,
-    title: "Site immobilier",
-    category: "Site Vitrine",
-    client: "Prestige Properties",
-    year: "2021",
-    description: "Site pour une agence immobilière haut de gamme avec recherche de biens et prise de rendez-vous.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 8,
-    title: "Application de méditation",
-    category: "Application",
-    client: "Zen Mind",
-    year: "2021",
-    description: "Application mobile de méditation avec sessions guidées et suivi des habitudes de méditation.",
-    image: "https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
   }
 ];
 
