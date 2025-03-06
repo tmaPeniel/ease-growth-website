@@ -205,26 +205,6 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center animate-on-scroll">
-            <h2 className="text-3xl font-bold mb-6">
-              Prêt à démarrer votre projet ?
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-block px-8 py-4 bg-gold text-black hover:bg-white transition-colors duration-300 rounded-full text-base font-medium"
-            >
-              Nous contacter
-            </Link>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

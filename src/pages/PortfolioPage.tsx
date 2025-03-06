@@ -247,26 +247,6 @@ const PortfolioPage = () => {
           </div>
         </div>
       )}
-
-      {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center animate-on-scroll">
-            <h2 className="text-3xl font-bold mb-6">
-              Vous avez un projet en tête ?
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Contactez-nous pour discuter de votre projet et découvrir comment nous pouvons vous aider à le concrétiser.
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-block px-8 py-4 bg-gold text-black hover:bg-white transition-colors duration-300 rounded-full text-base font-medium"
-            >
-              Démarrer un projet
-            </a>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
