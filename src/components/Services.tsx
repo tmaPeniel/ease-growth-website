@@ -10,18 +10,18 @@ const services = [
     link: "/services#web-creation"
   },
   {
+    icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
+    title: "Marketing digital",
+    description: "Stratégies de référencement et de contenu pour augmenter votre visibilité en ligne.",
+    link: "/services#marketing"
+  },
+  {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
     title: "Formation web",
     description: "Formations personnalisées pour maîtriser les outils web et gérer votre présence en ligne.",
     link: "https://www.example.com/formations",
     external: true,
     soon: true
-  },
-  {
-    icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
-    title: "Marketing digital",
-    description: "Stratégies de référencement et de contenu pour augmenter votre visibilité en ligne.",
-    link: "/services#marketing"
   }
 ];
 
