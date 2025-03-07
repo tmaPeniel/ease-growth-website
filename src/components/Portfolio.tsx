@@ -6,17 +6,24 @@ import { ArrowRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Site vitrine Agence Photo",
+    title: "Site vitrine C'EST DANS LA BOÎTE",
     category: "Site Vitrine",
     image: "https://images.unsplash.com/photo-1492105254157-2291922b8b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     link: "https://cestdanslaboite.pro/"
   },
   {
     id: 2,
-    title: "Site vitrine Agence de communication",
+    title: "Site vitrine YADAQ",
     category: "Site Vitrine",
     image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     link: "https://www.yadaq.com/"
+  },
+  {
+    id: 3,
+    title: "Plateforme de formation EASE GROWTH Formation",
+    category: "En cours",
+    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    link: "#"
   }
 ];
 
