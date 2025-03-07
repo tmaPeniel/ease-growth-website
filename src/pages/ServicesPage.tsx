@@ -19,6 +19,19 @@ const ServicesPage = () => {
       ]
     },
     {
+      id: "marketing",
+      icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
+      title: "Marketing digital",
+      description: "Des stratégies digitales efficaces pour augmenter votre visibilité en ligne et attirer plus de clients.",
+      features: [
+        "Référencement naturel (SEO)",
+        "Publicité Google Ads",
+        "Réseaux sociaux",
+        "Email marketing",
+        "Analyse de performance"
+      ]
+    },
+    {
       id: "training",
       icon: <BookOpen className="w-12 h-12 mb-6 text-gold" />,
       title: "Formation web",
@@ -33,19 +46,6 @@ const ServicesPage = () => {
       external: true,
       externalLink: "https://www.example.com/formations",
       soon: true
-    },
-    {
-      id: "marketing",
-      icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
-      title: "Marketing digital",
-      description: "Des stratégies digitales efficaces pour augmenter votre visibilité en ligne et attirer plus de clients.",
-      features: [
-        "Référencement naturel (SEO)",
-        "Publicité Google Ads",
-        "Réseaux sociaux",
-        "Email marketing",
-        "Analyse de performance"
-      ]
     }
   ];
 

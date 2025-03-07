@@ -72,8 +72,7 @@ const Footer = () => {
               {[
                 { name: "Portfolio", path: "/portfolio" },
                 { name: "À propos", path: "/about" },
-                { name: "Contact", path: "/contact" },
-                { name: "Blog", path: "#" },
+                { name: "Contact", path: "/contact" }
               ].map((item, index) => (
                 <li key={index}>
                   <Link to={item.path} className="text-gray-400 hover:text-gold transition-colors">
