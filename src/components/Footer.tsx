@@ -56,7 +56,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6">Services</h3>
             <ul className="space-y-4">
-              {["Création de site web", "Design UI/UX", "Formation web", "Marketing digital"].map((item, index) => (
+              {["Création de site web", "Formation web", "Marketing digital"].map((item, index) => (
                 <li key={index}>
                   <Link to="/services" className="text-gray-400 hover:text-gold transition-colors">
                     {item}
