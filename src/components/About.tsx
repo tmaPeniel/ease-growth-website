@@ -64,15 +64,15 @@ const About = () => {
               <div className="absolute -bottom-5 -left-5 sm:bottom-5 sm:left-5 glass-card p-4 rounded-xl max-w-[80%] sm:max-w-[60%] z-20 shadow-xl border border-white/30">
                 <div className="flex items-center mb-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                  <span className="text-xs font-medium">En ligne depuis 2023</span>
+                  <span className="text-xs font-medium">En ligne depuis 2024</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
-                    <div className="text-xl font-bold">50+</div>
+                    <div className="text-xl font-bold">2</div>
                     <div className="text-xs text-gray-500">Projets</div>
                   </div>
                   <div>
-                    <div className="text-xl font-bold">30+</div>
+                    <div className="text-xl font-bold">4</div>
                     <div className="text-xs text-gray-500">Clients</div>
                   </div>
                   <div>
