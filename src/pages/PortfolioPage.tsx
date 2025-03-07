@@ -10,7 +10,7 @@ const projects = [
     client: "C'EST DANS LA BOITE",
     year: "2025",
     description: "Site vitrine pour agence photo avec une interface élégante et un parcours d'achat optimisé.",
-    image: "https://images.unsplash.com/photo-1492105254157-2291922b8b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    image: "public/images/CDLB - logo.png"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
     client: "YADAQ",
     year: "2024",
     description: "Site vitrine pour une agence de communication avec réservation en ligne et présentation des services.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    image: "public/images/Blanc et Cercle Rouge Art Logo.jpg"
   },
   {
     id: 3,

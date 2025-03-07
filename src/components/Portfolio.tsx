@@ -8,21 +8,21 @@ const projects = [
     id: 1,
     title: "Site vitrine C'EST DANS LA BOÎTE",
     category: "Site Vitrine",
-    image: "https://images.unsplash.com/photo-1492105254157-2291922b8b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "public/images/CDLB - logo.png",
     link: "https://cestdanslaboite.pro/"
   },
   {
     id: 2,
     title: "Site vitrine YADAQ",
     category: "Site Vitrine",
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "public/images/Blanc et Cercle Rouge Art Logo.jpg",
     link: "https://www.yadaq.com/"
   },
   {
     id: 3,
     title: "Plateforme de formation EASE GROWTH Formation",
     category: "En cours",
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     link: "#"
   }
 ];
