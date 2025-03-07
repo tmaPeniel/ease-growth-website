@@ -6,15 +6,15 @@ const testimonials = [
   {
     id: 1,
     quote: "L'équipe d'EASE GROWTH a su comprendre nos besoins et créer un site web qui reflète parfaitement notre image de marque. Un travail de qualité qui a dépassé nos attentes.",
-    name: "Sophie Martin",
-    position: "Directrice Marketing, Luxury Corp",
+    name: "Édèle MILAN",
+    position: "Founder, C'EST DANS LA BOITE",
     avatar: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
     id: 2,
     quote: "Grâce à la formation dispensée par EASE GROWTH, nous sommes maintenant autonomes dans la gestion de notre site e-commerce. Une équipe pédagogue et à l'écoute !",
-    name: "Thomas Dubois",
-    position: "Gérant, Artisanat Local",
+    name: "Vincent BOUITI-VIAUDO",
+    position: "Founder, YADAQ",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {

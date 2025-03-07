@@ -9,14 +9,14 @@ const projects = [
     title: "Site vitrine Agence Photo",
     category: "Site Vitrine",
     image: "https://images.unsplash.com/photo-1492105254157-2291922b8b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "/portfolio/1"
+    link: "https://cestdanslaboite.pro/"
   },
   {
     id: 2,
     title: "Site vitrine Agence de communication",
     category: "Site Vitrine",
     image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "/portfolio/3"
+    link: "https://www.yadaq.com/"
   }
 ];
 
