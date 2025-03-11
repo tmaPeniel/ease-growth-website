@@ -6,9 +6,11 @@ const FooterSocials = () => {
   return (
     <div>
       <Link to="/" className="inline-block mb-6">
-        <span className="text-2xl font-display font-bold">
-          EASE<span className="text-gold">GROWTH</span>
-        </span>
+        <img 
+          src="/lovable-uploads/d931a4c5-2978-4a6a-9429-18ed20c55960.png" 
+          alt="EASE GROWTH Logo" 
+          className="h-10"
+        />
       </Link>
       <p className="text-gray-400 mb-6">
         Agence de création de sites web et formation, nous accompagnons les entreprises dans leur transformation digitale.

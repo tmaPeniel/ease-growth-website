@@ -51,9 +51,11 @@ const Navbar = () => {
           to="/" 
           className="relative z-50 flex items-center"
         >
-          <span className="text-2xl font-display font-bold text-black">
-            EASE<span className="text-gold">GROWTH</span>
-          </span>
+          <img 
+            src="/lovable-uploads/d931a4c5-2978-4a6a-9429-18ed20c55960.png" 
+            alt="EASE GROWTH Logo" 
+            className="h-12"
+          />
         </Link>
 
         {/* Desktop Navigation */}
