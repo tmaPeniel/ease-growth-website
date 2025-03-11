@@ -93,8 +93,8 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div 
-          className={`fixed inset-0 z-40 bg-white flex flex-col justify-center items-center transition-all duration-300 ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          className={`fixed inset-0 z-40 bg-white lg:hidden flex flex-col justify-center items-center transition-all duration-300 ${
+            isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
           }`}
         >
           <nav className="flex flex-col space-y-8 items-center">
