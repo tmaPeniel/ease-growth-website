@@ -22,7 +22,7 @@ const About = () => {
               Expertise et créativité au service de votre réussite
             </h2>
             <p className="text-gray-600 mb-6">
-              EASE GROWTH est une agence web spécialisée dans la création de sites internet et la formation. Notre équipe de professionnels passionnés met son expertise au service de votre réussite.
+              EASE GROWTH est une agence web spécialisée dans la création de sites internet et la formation dans les technologie du web. Notre équipe de professionnels passionnés met son expertise au service de votre réussite.
             </p>
             <p className="text-gray-600 mb-8">
               Nous croyons qu'un site web performant doit être à la fois esthétique et fonctionnel, tout en reflétant l'identité unique de votre entreprise. C'est pourquoi nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et créer des solutions sur mesure.
@@ -68,11 +68,11 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
-                    <div className="text-xl font-bold">2</div>
+                    <div className="text-xl font-bold">+3</div>
                     <div className="text-xs text-gray-500">Projets</div>
                   </div>
                   <div>
-                    <div className="text-xl font-bold">4</div>
+                    <div className="text-xl font-bold">+3</div>
                     <div className="text-xs text-gray-500">Clients</div>
                   </div>
                   <div>

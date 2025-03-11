@@ -6,51 +6,50 @@ import { Link } from "react-router-dom";
 const AboutPage = () => {
   const milestones = [
     {
-      year: "2020",
+      year: "Decembre 2023",
       title: "Fondation d'EASE GROWTH",
       description: "Création de l'agence avec une vision claire : simplifier l'accès au digital."
     },
     {
-      year: "2021",
-      title: "Expansion de l'équipe",
-      description: "Recrutement de talents spécialisés en développement et design."
+      year: "Mars 2024",
+      title: "Premier projet : LK FORMATION",
+      description: "Développement d'un site web pour s'inscrire à des formations professionnelles."
     },
     {
-      year: "2022",
-      title: "Lancement du pôle formation",
-      description: "Développement de programmes pour former aux compétences web."
+      year: "Aout 2024",
+      title: "Deuxieme projet : YADAQ",
+      description: "Developpement d'un site vitrine pour une agence de communication."
     },
     {
-      year: "2023",
-      title: "Prix d'innovation digitale",
-      description: "Reconnaissance de notre approche créative et efficace."
+      year: "Octobre 2024",
+      title: "Troisième projet : C'EST DANS LA BOITE",
+      description: "Developpement d'un site vitrine pour une photographe professionnelle."
+    },
+    {
+      year: "2025",
+      title: "Mise en place du pôle formation",
+      description: "Développement de programmes pour former aux compétences web et data."
     }
   ];
 
   const teamMembers = [
     {
-      name: "Sophie Martin",
-      role: "Fondatrice & Directrice",
+      name: "Karl SAWADOGO",
+      role: "Administration et Formation",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
       bio: "Experte en stratégie digitale avec plus de 10 ans d'expérience dans le secteur web."
     },
     {
-      name: "Thomas Dubois",
-      role: "Directeur Technique",
+      name: "Péniel TAOUEMA",
+      role: "Technique et Formation",
       image: "https://images.unsplash.com/photo-1600878459138-e1123b37cb30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
       bio: "Développeur full-stack passionné par les technologies innovantes et l'expérience utilisateur."
     },
     {
-      name: "Emma Petit",
-      role: "Directrice Artistique",
+      name: "Lorenzo DELOFON",
+      role: "Relation Client et Formation",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
       bio: "Designer UX/UI créative spécialisée dans la conception d'interfaces intuitives et esthétiques."
-    },
-    {
-      name: "Nicolas Bernard",
-      role: "Responsable Formation",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      bio: "Formateur expérimenté passionné par la transmission de compétences et l'accompagnement."
     }
   ];
 
@@ -113,7 +112,7 @@ const AboutPage = () => {
                 Faciliter la croissance des entreprises grâce au digital
               </h2>
               <p className="text-gray-600 mb-6">
-                Fondée en 2020, EASE GROWTH est née d'une conviction : le digital devrait être accessible à tous. Notre mission est de démocratiser les outils numériques et d'aider les entreprises à se développer grâce à une présence en ligne efficace et impactante.
+                Fondée en 2024, EASE GROWTH est née d'une conviction : le digital devrait être accessible à tous. Notre mission est de démocratiser les outils numériques et d'aider les entreprises à se développer grâce à une présence en ligne efficace et impactante.
               </p>
               <p className="text-gray-600 mb-8">
                 Nous sommes plus qu'une simple agence web; nous sommes des partenaires de croissance. Notre approche combine expertise technique, créativité et compréhension approfondie des besoins de nos clients pour créer des solutions sur mesure qui génèrent des résultats tangibles.
@@ -201,7 +200,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4">
                 <Users className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-bold mb-2">30+</h3>
+              <h3 className="text-4xl font-bold mb-2">+3</h3>
               <p className="text-gray-600">Clients satisfaits</p>
             </div>
             
@@ -209,7 +208,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4">
                 <Award className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-bold mb-2">50+</h3>
+              <h3 className="text-4xl font-bold mb-2">+3</h3>
               <p className="text-gray-600">Projets réalisés</p>
             </div>
             
@@ -217,7 +216,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4">
                 <Calendar className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-bold mb-2">3+</h3>
+              <h3 className="text-4xl font-bold mb-2">+1</h3>
               <p className="text-gray-600">Années d'expérience</p>
             </div>
           </div>

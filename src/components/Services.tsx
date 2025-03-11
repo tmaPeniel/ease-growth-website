@@ -18,7 +18,7 @@ const services = [
   {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
     title: "Formation web",
-    description: "Formations personnalisées pour maîtriser les outils web et gérer votre présence en ligne.",
+    description: "Formations personnalisées pour maîtriser les outils web.",
     link: "https://www.example.com/formations",
     external: true,
     soon: true

@@ -39,11 +39,9 @@ const ServicesPage = () => {
       title: "Formation web",
       description: "Des formations personnalisées pour vous permettre de maîtriser les outils web et gérer votre site en toute autonomie.",
       features: [
-        "WordPress & CMS",
+        "PowerBI",
         "HTML/CSS pour débutants",
-        "SEO fondamental",
-        "Administration de site",
-        "Marketing digital"
+        "Javascript pour le Web"
       ],
       external: true,
       externalLink: "https://www.example.com/formations",

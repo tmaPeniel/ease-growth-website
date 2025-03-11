@@ -73,7 +73,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Nous créons des sites web professionnels et des stratégies digitales qui transforment votre vision en réalité.
+            Nous créons des sites web professionnels et des stratégies digitales pour votre croissance et succès en ligne sans pression.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-down opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
