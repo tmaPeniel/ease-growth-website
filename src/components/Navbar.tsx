@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -98,12 +99,18 @@ const Navbar = () => {
         </button>
 
         <div 
-          className={`fixed inset-0 top-0 left-0 w-full h-full z-40 bg-white flex flex-col justify-center items-center transition-all duration-300 ${
+          className={`fixed inset-0 w-full h-screen bg-white flex flex-col justify-center items-center transition-all duration-300 ${
             isOpen 
               ? "opacity-100 pointer-events-auto" 
               : "opacity-0 pointer-events-none"
           }`}
-          style={{ position: 'fixed', top: 0 }}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }}
         >
           <nav className="flex flex-col space-y-8 items-center">
             {navLinks.map((link) => (
