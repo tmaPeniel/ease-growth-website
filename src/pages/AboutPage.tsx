@@ -112,7 +112,7 @@ const AboutPage = () => {
                 Faciliter la croissance des entreprises grâce au digital
               </h2>
               <p className="text-gray-600 mb-6">
-                Créée en 2024, EASE GROWTH est née d'une conviction : le digital devrait être accessible à tous. 
+                Créée en 2024, EASE GROWTH est née d'une conviction : aider les PME, Artisants et Startup à gagner en visibilité sur le web. 
                 Notre mission est d'aider les entreprises, PME, Artisants... à se développer grâce à une présence en ligne efficace et impactante.
               </p>
               <p className="text-gray-600 mb-8">
