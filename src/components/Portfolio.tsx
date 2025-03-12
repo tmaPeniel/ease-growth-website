@@ -8,14 +8,14 @@ const projects = [
     id: 1,
     title: "Site vitrine C'EST DANS LA BOÎTE",
     category: "Site Vitrine",
-    image: "public/images/CDLB - logo.png",
+    image: "lovable-uploads/CDLB - logo.png",
     link: "https://cestdanslaboite.pro/"
   },
   {
     id: 2,
     title: "Site vitrine YADAQ",
     category: "Site Vitrine",
-    image: "public/images/Blanc et Cercle Rouge Art Logo.jpg",
+    image: "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg",
     link: "https://www.yadaq.com/"
   },
   {
