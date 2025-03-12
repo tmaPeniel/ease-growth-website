@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -8,7 +7,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Handle scrolling effect
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -22,12 +20,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu only when changing routes
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -59,7 +55,6 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
         <Link 
           to="/" 
           className="relative z-50 flex items-center"
@@ -71,7 +66,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
@@ -95,7 +89,6 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button 
           className="lg:hidden relative z-50" 
           onClick={() => setIsOpen(!isOpen)}
@@ -104,13 +97,13 @@ const Navbar = () => {
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Navigation */}
         <div 
-          className={`fixed inset-0 z-40 bg-white flex flex-col justify-center items-center transition-all duration-300 ${
+          className={`fixed inset-0 top-0 left-0 w-full h-full z-40 bg-white flex flex-col justify-center items-center transition-all duration-300 ${
             isOpen 
               ? "opacity-100 pointer-events-auto" 
               : "opacity-0 pointer-events-none"
           }`}
+          style={{ position: 'fixed', top: 0 }}
         >
           <nav className="flex flex-col space-y-8 items-center">
             {navLinks.map((link) => (
