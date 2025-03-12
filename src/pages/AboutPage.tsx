@@ -112,7 +112,8 @@ const AboutPage = () => {
                 Faciliter la croissance des entreprises grâce au digital
               </h2>
               <p className="text-gray-600 mb-6">
-                Fondée en 2024, EASE GROWTH est née d'une conviction : le digital devrait être accessible à tous. Notre mission est de démocratiser les outils numériques et d'aider les entreprises à se développer grâce à une présence en ligne efficace et impactante.
+                Créée en 2024, EASE GROWTH est née d'une conviction : le digital devrait être accessible à tous. 
+                Notre mission est d'aider les entreprises, PME, Artisants... à se développer grâce à une présence en ligne efficace et impactante.
               </p>
               <p className="text-gray-600 mb-8">
                 Nous sommes plus qu'une simple agence web; nous sommes des partenaires de croissance. Notre approche combine expertise technique, créativité et compréhension approfondie des besoins de nos clients pour créer des solutions sur mesure qui génèrent des résultats tangibles.
@@ -289,7 +290,7 @@ const AboutPage = () => {
               PRÊT À DÉMARRER ?
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Transformons ensemble votre vision en réalité
+              Transformons ensemble votre entreprise
             </h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Que vous soyez une petite entreprise ou une grande organisation, nous avons les compétences et l'expertise nécessaires pour vous aider à atteindre vos objectifs digitaux.
