@@ -27,6 +27,19 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: "Accueil", path: "/" },
     { name: "Services", path: "/services" },
@@ -94,7 +107,9 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         <div 
           className={`fixed inset-0 z-40 bg-white flex flex-col justify-center items-center transition-all duration-300 ${
-            isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            isOpen 
+              ? "opacity-100 pointer-events-auto" 
+              : "opacity-0 pointer-events-none"
           }`}
         >
           <nav className="flex flex-col space-y-8 items-center">
@@ -104,6 +119,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-xl font-medium transition-colors hover:text-gold 
                   ${location.pathname === link.path ? "text-gold" : "text-black"}`}
+                onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
@@ -111,6 +127,7 @@ const Navbar = () => {
             <Link 
               to="/contact" 
               className="mt-4 px-8 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full text-base font-medium"
+              onClick={() => setIsOpen(false)}
             >
               Démarrer un projet
             </Link>
