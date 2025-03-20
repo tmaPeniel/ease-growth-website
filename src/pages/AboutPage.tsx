@@ -11,18 +11,13 @@ const AboutPage = () => {
       description: "Création de l'agence avec une vision claire : simplifier l'accès au digital."
     },
     {
-      year: "Mars 2024",
-      title: "Premier projet : LK FORMATION",
-      description: "Développement d'un site web pour s'inscrire à des formations professionnelles."
-    },
-    {
-      year: "Aout 2024",
-      title: "Deuxieme projet : YADAQ",
+      year: "Septembre 2024",
+      title: "Premier projet : YADAQ",
       description: "Developpement d'un site vitrine pour une agence de communication."
     },
     {
       year: "Octobre 2024",
-      title: "Troisième projet : C'EST DANS LA BOITE",
+      title: "Deuxieme projet : C'EST DANS LA BOITE",
       description: "Developpement d'un site vitrine pour une photographe professionnelle."
     },
     {

@@ -29,15 +29,6 @@ const projects = [
     year: "2025",
     description: "Plateforme d'apprentissage en ligne avec système de cours, quiz et suivi de progression.",
     image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-  },
-  {
-    id: 4,
-    title: "Site Vitrine Formation Professionnelle",
-    category: "Site Vitrine",
-    client: "LK Formation",
-    year: "2024",
-    description: "Site vitrine pour organisme de formation professionnelle avec catalogue de formations et espace client.",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
   }
 ];
 
