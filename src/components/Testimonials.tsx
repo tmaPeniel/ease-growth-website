@@ -12,17 +12,10 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "Grâce à la formation dispensée par EASE GROWTH, nous sommes maintenant autonomes dans la gestion de notre site e-commerce. Une équipe pédagogue et à l'écoute !",
+    quote: "Nous avons fait appel à EASE GROWTH pour la création de notre site web, et nous ne pouvons que recommander leur expertise ! Dès le premier échange, leur équipe a su comprendre nos besoins et nos attentes en matière de design et de fonctionnalités.",
     name: "Vincent BOUITI-VIAUDO",
     position: "Founder, YADAQ",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    id: 3,
-    quote: "Professionnalisme, réactivité et créativité : voilà comment je décrirais EASE GROWTH. Ils ont transformé notre présence en ligne et les résultats sont impressionnants.",
-    name: "Émilie Leduc",
-    position: "CEO, StartUp Innovante",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg"
   }
 ];
 
