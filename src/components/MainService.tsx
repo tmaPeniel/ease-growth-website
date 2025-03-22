@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { LucideIcon } from "lucide-react";
 
 interface ServiceFeature {
   id: string;
@@ -11,7 +12,6 @@ interface ServiceFeature {
   external?: boolean;
   externalLink?: string;
   soon?: boolean;
-  image?: string; // Add image property
 }
 
 interface MainServiceProps {
@@ -73,9 +73,13 @@ const MainService: React.FC<MainServiceProps> = ({ service, index }) => {
           {/* Decorative elements */}
           <div className="absolute inset-0 bg-gradient-to-bl from-gold/10 to-transparent"></div>
           
-          {/* Main image */}
+          {/* Main image - using placeholder images, replace with actual service images */}
           <img
-            src={service.image}
+            src={`https://images.unsplash.com/photo-${
+              index === 0 ? '1460925895917-afdab827c52f' : 
+              index === 1 ? '1517245386807-bb43ffb1f7b2' : 
+              '1533750349088-cd871a92f8a7'
+            }?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80`}
             alt={service.title}
             className="rounded-2xl object-cover w-full h-full"
           />
