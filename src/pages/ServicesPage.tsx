@@ -1,4 +1,3 @@
-
 import Layout from "../components/Layout";
 import { Monitor, BookOpen, BarChart, Users, Code, Database, Search } from "lucide-react";
 import MainService from "../components/MainService";
@@ -20,7 +19,8 @@ const ServicesPage = () => {
         "Applications web sur mesure",
         "Interfaces administrateur intuitives",
         "Optimisation mobile"
-      ]
+      ],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       id: "marketing",
@@ -30,7 +30,8 @@ const ServicesPage = () => {
       features: [
         "Référencement naturel (SEO)",
         "Publicité Google Ads"
-      ]
+      ],
+      image: "/lovable-uploads/SEO-marketing-digital.jpg"
     },
     {
       id: "training",
@@ -44,7 +45,8 @@ const ServicesPage = () => {
       ],
       external: true,
       externalLink: "https://www.example.com/formations",
-      soon: true
+      soon: true,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 

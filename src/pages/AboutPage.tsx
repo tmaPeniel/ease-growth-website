@@ -1,4 +1,3 @@
-
 import Layout from "../components/Layout";
 import { ArrowRight, Users, Award, Calendar, Check } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -126,23 +125,26 @@ const AboutPage = () => {
 
             <div className="animate-on-scroll">
               <div className="relative">
-                {/* Timeline */}
-                <div className="space-y-8">
+                <div className="space-y-12 relative pl-12 border-l-2 border-gold/30">
                   {milestones.map((milestone, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0 bg-gold text-black font-bold py-1 px-3 rounded-full text-sm mr-4">
-                        {milestone.year}
+                    <div key={index} className="relative">
+                      <div className="absolute -left-[3.75rem] flex items-center justify-center w-10 h-10 bg-gold text-black rounded-full font-medium">
+                        <div className="text-xs font-bold">{milestone.year.split(" ")[0].substring(0, 3)}</div>
                       </div>
+                      
+                      <div className="absolute -left-[12.5rem] w-32 text-right pr-6">
+                        <span className="text-sm font-medium text-gray-600">{milestone.year}</span>
+                      </div>
+                      
                       <div>
                         <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
                         <p className="text-gray-600">{milestone.description}</p>
                       </div>
+                      
+                      <div className="absolute -left-[0.81rem] top-1.5 w-4 h-4 bg-gold rounded-full"></div>
                     </div>
                   ))}
                 </div>
-
-                {/* Decorative elements */}
-                <div className="absolute top-0 -bottom-10 left-[18px] w-0.5 bg-gray-200 -z-10"></div>
               </div>
             </div>
           </div>
@@ -261,11 +263,9 @@ const AboutPage = () => {
 
             <div className="animate-on-scroll order-1 lg:order-2">
               <div className="relative overflow-hidden rounded-2xl aspect-square">
-                {/* Decorative elements */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-gold/30 rounded-full filter blur-xl"></div>
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gold/20 rounded-full filter blur-xl"></div>
                 
-                {/* Main image */}
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="Équipe EASE GROWTH en collaboration"
