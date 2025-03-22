@@ -14,6 +14,8 @@ const ServicesPage = () => {
       description: "Des sites web professionnels, responsive et optimisés pour convertir vos visiteurs en clients.",
       features: [
         "Sites vitrines élégants",
+        "Portfolio présentant les réalisations des artisans",
+        "Sites avec CMS pour la gestion de contenu facile",
         "E-commerce performants",
         "Applications web sur mesure",
         "Interfaces administrateur intuitives",
@@ -27,10 +29,7 @@ const ServicesPage = () => {
       description: "Des stratégies digitales efficaces pour augmenter votre visibilité en ligne et attirer plus de clients.",
       features: [
         "Référencement naturel (SEO)",
-        "Publicité Google Ads",
-        "Réseaux sociaux",
-        "Email marketing",
-        "Analyse de performance"
+        "Publicité Google Ads"
       ]
     },
     {

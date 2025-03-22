@@ -6,14 +6,14 @@ const ContactInfo = () => {
     {
       icon: <Phone className="w-5 h-5 text-gold" />,
       title: "Téléphone",
-      details: "+33 1 23 45 67 89",
-      link: "tel:+33123456789"
+      details: "+33 6 26 43 85 07",
+      link: "tel:+33626438507"
     },
     {
       icon: <Mail className="w-5 h-5 text-gold" />,
       title: "Email",
-      details: "contact@easegrowth.fr",
-      link: "mailto:contact@easegrowth.fr"
+      details: "easegrowth0@gmail.com",
+      link: "mailto:easegrowth0@gmail.com"
     }
   ];
 
