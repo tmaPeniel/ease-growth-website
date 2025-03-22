@@ -125,26 +125,24 @@ const AboutPage = () => {
 
             <div className="animate-on-scroll">
               <div className="relative">
-                <div className="space-y-12 relative pl-12 border-l-2 border-gold/30">
+                {/* Timeline */}
+                <div className="space-y-8">
                   {milestones.map((milestone, index) => (
-                    <div key={index} className="relative">
-                      <div className="absolute -left-[3.75rem] flex items-center justify-center w-10 h-10 bg-gold text-black rounded-full font-medium">
-                        <div className="text-xs font-bold">{milestone.year.split(" ")[0].substring(0, 3)}</div>
-                      </div>
-                      
-                      <div className="absolute -left-[12.5rem] w-32 text-right pr-6">
-                        <span className="text-sm font-medium text-gray-600">{milestone.year}</span>
+                    <div key={index} className="flex items-start">
+                      <div className="flex-shrink-0 bg-gold text-black font-bold py-1 px-3 rounded-full text-sm mr-4">
+                        {milestone.year}
                       </div>
                       
                       <div>
                         <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
                         <p className="text-gray-600">{milestone.description}</p>
                       </div>
-                      
-                      <div className="absolute -left-[0.81rem] top-1.5 w-4 h-4 bg-gold rounded-full"></div>
-                    </div>
+                      </div>
                   ))}
                 </div>
+
+                {/* Decorative elements */}
+                <div className="absolute top-0 -bottom-10 left-[18px] w-0.5 bg-gray-200 -z-10"></div>
               </div>
             </div>
           </div>
