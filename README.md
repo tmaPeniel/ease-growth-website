@@ -1,69 +1,88 @@
-# Welcome to your Lovable project
+EASE Growth - Site Vitrine
 
-## Project info
+🌍 Présentation
 
-**URL**: https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f
+EASE Growth est un site vitrine développé pour une agence digitale, mettant en avant ses services, son expertise et son identité de marque. Ce projet a été conçu avec React, Vite, et Tailwind CSS, et intègre des éléments générés via Lovable.ai. L'application est hébergée sur Hostinger.
 
-## How can I edit this code?
+🚀 Technologies utilisées
 
-There are several ways of editing your application.
+React : Framework JavaScript pour une interface utilisateur réactive.
 
-**Use Lovable**
+Vite : Outil de build rapide pour le développement.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f) and start prompting.
+Tailwind CSS : Framework CSS utility-first pour un design moderne et responsive.
 
-Changes made via Lovable will be committed automatically to this repo.
+Lovable.ai : Génération de contenu et d'éléments assistée par IA.
 
-**Use your preferred IDE**
+Hostinger : Hébergement du site web.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+📂 Installation et exécution locale
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1️⃣ Prérequis
 
-Follow these steps:
+Avant de commencer, assure-toi d'avoir Node.js installé.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2️⃣ Cloner le projet
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+git clone https://github.com/ton-projet/EASE-Growth.git
+cd EASE-Growth
 
-# Step 3: Install the necessary dependencies.
-npm i
+3️⃣ Installer les dépendances
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
+
+4️⃣ Lancer le serveur en mode développement
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Le site sera accessible sur http://localhost:5173/ par défaut.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📦 Déploiement
 
-**Use GitHub Codespaces**
+Le site est hébergé sur Hostinger. Voici comment le déployer :
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1️⃣ Générer les fichiers de build
 
-## What technologies are used for this project?
+npm run build
 
-This project is built with .
+Un dossier dist/ sera créé.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2️⃣ Transférer les fichiers sur Hostinger
 
-## How can I deploy this project?
+Se connecter à l'hébergement via FTP ou File Manager.
 
-Simply open [Lovable](https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f) and click on Share -> Publish.
+Uploader le contenu du dossier dist/ dans le dossier public_html.
 
-## I want to use a custom domain - is that possible?
+3️⃣ Configurer le fichier .htaccess (si nécessaire)
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Si le site ne charge pas correctement, ajouter un fichier .htaccess dans public_html :
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /index.html [L]
+
+📌 Améliorations futures
+
+Optimisation SEO et performances.
+
+Ajout d'une section blog ou portfolio.
+
+Intégration d'un CMS pour la gestion du contenu dynamique.
+
+🛠️ Contribuer
+
+Les contributions sont les bienvenues !
+
+Fork le projet
+
+Crée une branche : git checkout -b feature-amélioration
+
+Fais tes modifications et pousse-les : git push origin feature-amélioration
+
+Ouvre une Pull Request
+
+📧 Contact
+
+Pour toute question ou suggestion, tu peux me contacter via [ton email ou lien de contact].
+
