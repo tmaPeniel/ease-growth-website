@@ -3,7 +3,7 @@
 ## 🌍 Présentation
 **EASE Growth** est un site vitrine développé pour une agence digitale, mettant en avant ses services, son expertise et son identité de marque. Ce projet a été conçu avec **React**, **Vite**, et **Tailwind CSS**, et intègre des éléments générés via **Lovable.ai**. L'application est hébergée sur **Hostinger**.
 
-Lien du site : easegrowth.fr
+Lien du site : www.easegrowth.fr
 
 ## 🚀 Technologies utilisées
 - **React** : Framework JavaScript pour une interface utilisateur réactive.
