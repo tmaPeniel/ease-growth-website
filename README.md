@@ -1,69 +1,72 @@
-# Welcome to your Lovable project
+# EASE Growth - Site Vitrine
 
-## Project info
+## 🌍 Présentation
+**EASE Growth** est un site vitrine développé pour une agence digitale, mettant en avant ses services, son expertise et son identité de marque. Ce projet a été conçu avec **React**, **Vite**, et **Tailwind CSS**, et intègre des éléments générés via **Lovable.ai**. L'application est hébergée sur **Hostinger**.
 
-**URL**: https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f
+Lien du site : www.easegrowth.fr
 
-## How can I edit this code?
+## 🚀 Technologies utilisées
+- **React** : Framework JavaScript pour une interface utilisateur réactive.
+- **Vite** : Outil de build rapide pour le développement.
+- **Tailwind CSS** : Framework CSS utility-first pour un design moderne et responsive.
+- **Lovable.ai** : Génération de contenu et d'éléments assistée par IA.
+- **Hostinger** : Hébergement du site web.
 
-There are several ways of editing your application.
+## 📂 Installation et exécution locale
+### 1️⃣ Prérequis
+Avant de commencer, assure-toi d'avoir **Node.js** installé.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### 2️⃣ Cloner le projet
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/ton-projet/EASE-Growth.git
+cd EASE-Growth
 ```
 
-**Edit a file directly in GitHub**
+### 3️⃣ Installer les dépendances
+```sh
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 4️⃣ Lancer le serveur en mode développement
+```sh
+npm run dev
+```
+Le site sera accessible sur `http://localhost:5173/` par défaut.
 
-**Use GitHub Codespaces**
+## 📦 Déploiement
+Le site est hébergé sur **Hostinger**. Voici comment le déployer :
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 1️⃣ Générer les fichiers de build
+```sh
+npm run build
+```
+Un dossier `dist/` sera créé.
 
-## What technologies are used for this project?
+### 2️⃣ Transférer les fichiers sur Hostinger
+- Se connecter à l'hébergement via **FTP** ou **File Manager**.
+- Uploader le contenu du dossier `dist/` dans le dossier **public_html**.
 
-This project is built with .
+### 3️⃣ Configurer le fichier `.htaccess` (si nécessaire)
+Si le site ne charge pas correctement, ajouter un fichier `.htaccess` dans `public_html` :
+```apache
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /index.html [L]
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📌 Améliorations futures
+- Optimisation SEO et performances.
+- Ajout d'une section blog ou portfolio.
+- Intégration d'un CMS pour la gestion du contenu dynamique.
 
-## How can I deploy this project?
+## 🛠️ Contribuer
+Les contributions sont les bienvenues !
+- **Fork** le projet
+- Crée une branche : `git checkout -b feature-amélioration`
+- Fais tes modifications et pousse-les : `git push origin feature-amélioration`
+- Ouvre une Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/6047a63a-8165-4f3b-a503-24f581eb8c8f) and click on Share -> Publish.
+## 📧 Contact
+Pour toute question ou suggestion, tu peux me contacter via **[ton email ou lien de contact]**.
 
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
