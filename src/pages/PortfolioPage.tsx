@@ -1,16 +1,22 @@
 
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Code, Award, Bulb } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
     id: 1,
     title: "Site vitrine Agence Photo",
     category: "Site Vitrine",
-    client: "C'EST DANS LA BOITE",
+    client: "C'EST DANS LA BOÎTE",
     year: "2025",
     description: "Site vitrine pour agence photo avec une interface élégante et un parcours d'achat optimisé.",
-    image: "lovable-uploads/CDLB - logo.png"
+    image: "lovable-uploads/CDLB - logo.png",
+    technologies: ["React", "Tailwind CSS", "Node.js", "Express"],
+    challenge: "Créer une interface attrayante et intuitive pour mettre en valeur les services photographiques tout en optimisant les conversions.",
+    solution: "Développement d'un site avec une galerie interactive et un système de réservation fluide qui valorise le travail du photographe."
   },
   {
     id: 2,
@@ -19,7 +25,10 @@ const projects = [
     client: "YADAQ",
     year: "2024",
     description: "Site vitrine pour une agence de communication avec réservation en ligne et présentation des services.",
-    image: "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg"
+    image: "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg",
+    technologies: ["React", "Next.js", "Styled Components", "MongoDB"],
+    challenge: "Mettre en place une identité visuelle forte et cohérente pour une agence de communication qui souhaite démontrer son expertise.",
+    solution: "Création d'un design épuré mais impactant avec des animations subtiles et une présentation claire des services proposés."
   },
   {
     id: 3,
@@ -28,7 +37,10 @@ const projects = [
     client: "Ease Growth Formation",
     year: "2025",
     description: "Plateforme d'apprentissage en ligne avec système de cours, quiz et suivi de progression.",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    technologies: ["React", "Firebase", "Redux", "Material UI"],
+    challenge: "Développer une plateforme d'apprentissage interactive et performante permettant le suivi précis de la progression des apprenants.",
+    solution: "Implémentation d'un système de cours modulaire avec des quiz interactifs et un tableau de bord détaillé pour visualiser la progression."
   },
   {
     id: 4,
@@ -37,7 +49,10 @@ const projects = [
     client: "Sankhiny",
     year: "2025",
     description: "Site E-Commerce pour la vente d'épice.",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    technologies: ["Shopify", "Liquid", "JavaScript", "SCSS"],
+    challenge: "Créer une expérience d'achat immersive et sécurisée pour la vente d'épices en ligne avec une gestion efficace des stocks.",
+    solution: "Développement d'une boutique en ligne avec des fiches produits détaillées, un processus de commande simplifié et un système de recommandations personnalisées."
   },
   {
     id: 5,
@@ -46,7 +61,10 @@ const projects = [
     client: "L'OR et L'ÉLÉGANCE",
     year: "2025",
     description: "Site vitrine pour une conseillère en image.",
-    image: "lovable-uploads/loretlelegance.jpg"
+    image: "lovable-uploads/loretlelegance.jpg",
+    technologies: ["WordPress", "Elementor", "PHP", "CSS"],
+    challenge: "Concevoir un site élégant qui reflète l'expertise en conseil d'image avec une prise de rendez-vous simplifiée.",
+    solution: "Création d'un site à l'esthétique raffinée avec un système de réservation intégré et une présentation claire des prestations."
   }
 ];
 
@@ -190,29 +208,42 @@ const PortfolioPage = () => {
                   <p className="text-gray-600 mb-6">
                     {project.description}
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h3 className="text-lg font-bold mb-3">Le défi</h3>
-                      <p className="text-gray-600">
-                        Créer une expérience utilisateur exceptionnelle tout en respectant l'identité visuelle du client et en assurant une performance optimale.
-                      </p>
+                  
+                  {/* Technologies Section */}
+                  <div className="mb-6">
+                    <div className="flex items-center mb-3">
+                      <Code className="w-5 h-5 mr-2 text-gold" />
+                      <h3 className="text-lg font-bold">Technologies utilisées</h3>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold mb-3">Notre solution</h3>
-                      <p className="text-gray-600">
-                        Une approche centrée sur l'utilisateur avec un design sur mesure et des fonctionnalités adaptées aux besoins spécifiques du client.
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-3">Technologies utilisées</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {["React", "Node.js", "Tailwind CSS", "MongoDB"].map((tech, index) => (
-                        <span key={index} className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, index) => (
+                        <Badge key={index} variant="outline" className="bg-gray-100 hover:bg-gray-200 text-gray-800">
                           {tech}
-                        </span>
+                        </Badge>
                       ))}
                     </div>
+                  </div>
+                  
+                  {/* Challenge Section */}
+                  <div className="mb-6">
+                    <div className="flex items-center mb-3">
+                      <Award className="w-5 h-5 mr-2 text-gold" />
+                      <h3 className="text-lg font-bold">Le défi</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      {project.challenge}
+                    </p>
+                  </div>
+                  
+                  {/* Solution Section */}
+                  <div className="mb-6">
+                    <div className="flex items-center mb-3">
+                      <Bulb className="w-5 h-5 mr-2 text-gold" />
+                      <h3 className="text-lg font-bold">Notre solution</h3>
+                    </div>
+                    <p className="text-gray-600">
+                      {project.solution}
+                    </p>
                   </div>
                 </div>
               </div>
