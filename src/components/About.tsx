@@ -68,11 +68,11 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-center">
                   <div>
-                    <div className="text-xl font-bold">+3</div>
+                    <div className="text-xl font-bold">+5</div>
                     <div className="text-xs text-gray-500">Projets</div>
                   </div>
                   <div>
-                    <div className="text-xl font-bold">+3</div>
+                    <div className="text-xl font-bold">+5</div>
                     <div className="text-xs text-gray-500">Clients</div>
                   </div>
                   <div>
