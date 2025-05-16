@@ -196,7 +196,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4">
                 <Users className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-bold mb-2">+3</h3>
+              <h3 className="text-4xl font-bold mb-2">+5</h3>
               <p className="text-gray-600">Clients satisfaits</p>
             </div>
             
@@ -204,7 +204,7 @@ const AboutPage = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4">
                 <Award className="w-8 h-8 text-gold" />
               </div>
-              <h3 className="text-4xl font-bold mb-2">+3</h3>
+              <h3 className="text-4xl font-bold mb-2">+5</h3>
               <p className="text-gray-600">Projets réalisés</p>
             </div>
             
