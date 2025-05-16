@@ -32,16 +32,16 @@ const projects = [
     id: 4,
     title: "Site E-Commerce SANKHINY ",
     category: "En cours",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#",
-    technologies: ["Shopify", "Liquid", "JavaScript", "SCSS"]
+    image: "lovable-uploads/Sankhiny.png",
+    link: "https://blank-site-a1apxqwo3phx2182.builder-preview.com/",
+    technologies: ["Hostinger", "Canva", "ChatGPT"]
   },
   {
     id: 5,
     title: "Site Vitrine l'OR ET l'ÉLÉGANCE",
     category: "En cours",
     image: "lovable-uploads/loretlelegance.jpg",
-    link: "#",
+    link: "https://gold-wallaby-994940.hostingersite.com/",
     technologies: ["WordPress", "Elementor", "PHP", "CSS"]
   }
 ];

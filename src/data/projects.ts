@@ -56,7 +56,7 @@ export const projects: Project[] = [
     client: "Sankhiny",
     year: "2025",
     description: "Site E-Commerce pour la vente d'épice.",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "lovable-uploads/Sankhiny.png",
     technologies: ["Hostinger", "CMS"],
     challenge: "Créer une expérience d'achat immersive et sécurisée pour la vente d'épices en ligne avec une gestion efficace des stocks.",
     solution: "Développement d'une boutique en ligne avec des fiches produits détaillées, un processus de commande simplifié et un système de recommandations personnalisées."
