@@ -30,7 +30,7 @@ const AboutPage = () => {
     {
       name: "Karl SAWADOGO",
       role: "Administration et Formation",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "lovable-uploads/EaseKarl.jpg",
       bio: "Experte en stratégie digitale avec plus de 10 ans d'expérience dans le secteur web."
     },
     {
@@ -42,7 +42,7 @@ const AboutPage = () => {
     {
       name: "Lorenzo DELOFON",
       role: "Relation Client et Formation",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "lovable-uploads/EaseGrowthLorenzo.jpg",
       bio: "Designer UX/UI créative spécialisée dans la conception d'interfaces intuitives et esthétiques."
     }
   ];
