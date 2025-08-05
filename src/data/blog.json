@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Les tendances du web design en 2025",
+    "slug": "tendances-web-design-2025",
+    "excerpt": "Découvrez les dernières tendances qui vont façonner le web design cette année.",
+    "content": "Le web design évolue constamment et 2025 apporte son lot de nouvelles tendances passionnantes. Parmi les plus marquantes, nous retrouvons l'essor du design minimaliste avec des interfaces épurées, l'utilisation croissante des micro-interactions pour améliorer l'expérience utilisateur, et l'intégration de l'intelligence artificielle dans les processus de création. Les couleurs vives et les dégradés audacieux font également leur grand retour, offrant aux designers de nouvelles possibilités créatives.",
+    "author": "EaseGrowth",
+    "publishDate": "2025-01-15",
+    "category": "Design",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Web Design", "Tendances", "UX/UI"]
+  },
+  {
+    "id": 2,
+    "title": "Optimiser le SEO de votre site web",
+    "slug": "optimiser-seo-site-web",
+    "excerpt": "Guide complet pour améliorer le référencement naturel de votre site internet.",
+    "content": "Le SEO (Search Engine Optimization) est un élément crucial pour la visibilité de votre site web. Pour optimiser votre référencement, commencez par effectuer une recherche de mots-clés pertinents pour votre secteur. Ensuite, optimisez vos balises titre et méta-descriptions, créez du contenu de qualité régulièrement, et assurez-vous que votre site se charge rapidement. N'oubliez pas l'importance du maillage interne et des backlinks de qualité pour renforcer l'autorité de votre domaine.",
+    "author": "EaseGrowth",
+    "publishDate": "2025-01-10",
+    "category": "SEO",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["SEO", "Référencement", "Marketing Digital"]
+  },
+  {
+    "id": 3,
+    "title": "L'importance de l'expérience utilisateur",
+    "slug": "importance-experience-utilisateur",
+    "excerpt": "Comment l'UX peut transformer votre business et fidéliser vos clients.",
+    "content": "L'expérience utilisateur (UX) est devenue un facteur déterminant dans le succès d'un site web ou d'une application. Une bonne UX se traduit par une navigation intuitive, des temps de chargement rapides, et une interface adaptée à tous les appareils. Elle permet non seulement d'améliorer la satisfaction des utilisateurs, mais aussi d'augmenter les taux de conversion et de fidéliser la clientèle. Investir dans l'UX, c'est investir dans la croissance durable de votre entreprise.",
+    "author": "EaseGrowth",
+    "publishDate": "2025-01-05",
+    "category": "UX Design",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["UX Design", "Expérience Client", "Conversion"]
+  },
+  {
+    "id": 4,
+    "title": "Développement web : React vs Vue.js",
+    "slug": "react-vs-vuejs-comparaison",
+    "excerpt": "Comparaison détaillée entre deux des frameworks JavaScript les plus populaires.",
+    "content": "React et Vue.js sont deux frameworks JavaScript incontournables pour le développement d'applications web modernes. React, développé par Facebook, se distingue par sa flexibilité et son écosystème riche, idéal pour les projets complexes. Vue.js, quant à lui, offre une courbe d'apprentissage plus douce et une syntaxe plus intuitive, parfait pour les équipes débutantes. Le choix entre les deux dépend de vos besoins spécifiques, de l'expérience de votre équipe, et de la complexité de votre projet.",
+    "author": "EaseGrowth",
+    "publishDate": "2024-12-28",
+    "category": "Développement",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["React", "Vue.js", "JavaScript", "Développement Web"]
+  },
+  {
+    "id": 5,
+    "title": "Sécurité web : protéger votre site",
+    "slug": "securite-web-protection-site",
+    "excerpt": "Les meilleures pratiques pour sécuriser votre site web contre les cyberattaques.",
+    "content": "La sécurité web est un enjeu majeur dans le paysage numérique actuel. Pour protéger votre site, commencez par installer un certificat SSL, maintenir vos CMS et plugins à jour, et utiliser des mots de passe robustes. Implémentez également une authentification à deux facteurs, effectuez des sauvegardes régulières, et surveillez votre site avec des outils de monitoring. N'hésitez pas à faire appel à des experts en cybersécurité pour auditer votre infrastructure et identifier les vulnérabilités potentielles.",
+    "author": "EaseGrowth",
+    "publishDate": "2024-12-20",
+    "category": "Sécurité",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "tags": ["Sécurité", "SSL", "Cybersécurité", "Protection"]
+  }
+]
