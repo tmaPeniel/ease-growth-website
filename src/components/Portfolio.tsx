@@ -2,49 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
-const projects = [
-  {
-    id: 1,
-    title: "Site vitrine C'EST DANS LA BOÎTE",
-    category: "Site Vitrine",
-    image: "lovable-uploads/CDLB - logo.png",
-    link: "https://cestdanslaboite.pro/",
-    technologies: ["React", "Tailwind CSS", "Node.js", "Express"]
-  },
-  {
-    id: 2,
-    title: "Site vitrine YADAQ",
-    category: "Site Vitrine",
-    image: "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg",
-    link: "https://www.yadaq.com/",
-    technologies: ["React", "Next.js", "Styled Components", "MongoDB"]
-  },
-  {
-    id: 3,
-    title: "Plateforme de formation EASE GROWTH Formation",
-    category: "En cours",
-    image: "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#",
-    technologies: ["React", "Firebase", "Redux", "Material UI"]
-  },
-  {
-    id: 4,
-    title: "Site E-Commerce SANKHINY ",
-    category: "En cours",
-    image: "lovable-uploads/Sankhiny.png",
-    link: "https://blank-site-a1apxqwo3phx2182.builder-preview.com/",
-    technologies: ["Hostinger", "Canva", "ChatGPT"]
-  },
-  {
-    id: 5,
-    title: "Site Vitrine l'OR ET l'ÉLÉGANCE",
-    category: "En cours",
-    image: "lovable-uploads/loretlelegance.jpg",
-    link: "https://gold-wallaby-994940.hostingersite.com/",
-    technologies: ["WordPress", "Elementor", "PHP", "CSS"]
-  }
-];
+import { projects } from "@/data/projects";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);

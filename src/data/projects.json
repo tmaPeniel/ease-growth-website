@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "Site vitrine C'EST DANS LA BOÎTE",
+    "category": "Site Vitrine",
+    "client": "C'EST DANS LA BOÎTE",
+    "year": "2025",
+    "description": "Site vitrine pour agence photo avec une interface élégante et un parcours d'achat optimisé.",
+    "image": "lovable-uploads/CDLB - logo.png",
+    "link": "https://cestdanslaboite.pro/",
+    "technologies": ["Hostinger", "CMS"],
+    "challenge": "Créer une interface attrayante et intuitive pour mettre en valeur les services photographiques tout en optimisant les conversions.",
+    "solution": "Développement d'un site avec une galerie interactive et un système de réservation fluide qui valorise le travail du photographe.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Site vitrine YADAQ",
+    "category": "Site Vitrine",
+    "client": "YADAQ",
+    "year": "2024",
+    "description": "Site vitrine pour une agence de communication avec réservation en ligne et présentation des services.",
+    "image": "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg",
+    "link": "https://www.yadaq.com/",
+    "technologies": ["Odoo", "Calendly"],
+    "challenge": "Mettre en place une identité visuelle forte et cohérente pour une agence de communication qui souhaite démontrer son expertise.",
+    "solution": "Création d'un design épuré mais impactant avec des animations subtiles et une présentation claire des services proposés.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Plateforme e-learning EASE GROWTH Formation",
+    "category": "E-Learning",
+    "client": "Ease Growth Formation",
+    "year": "2025",
+    "description": "Plateforme d'apprentissage en ligne avec système de cours, quiz et suivi de progression.",
+    "image": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "link": "#",
+    "technologies": ["Odoo", "Hostinger"],
+    "challenge": "Développer une plateforme d'apprentissage interactive et performante permettant le suivi précis de la progression des apprenants.",
+    "solution": "Implémentation d'un système de cours modulaire avec des quiz interactifs et un tableau de bord détaillé pour visualiser la progression.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Site E-Commerce SANKHINY",
+    "category": "E-Commerce",
+    "client": "Sankhiny",
+    "year": "2025",
+    "description": "Site E-Commerce pour la vente d'épice.",
+    "image": "lovable-uploads/Sankhiny.png",
+    "link": "https://blank-site-a1apxqwo3phx2182.builder-preview.com/",
+    "technologies": ["Hostinger", "CMS"],
+    "challenge": "Créer une expérience d'achat immersive et sécurisée pour la vente d'épices en ligne avec une gestion efficace des stocks.",
+    "solution": "Développement d'une boutique en ligne avec des fiches produits détaillées, un processus de commande simplifié et un système de recommandations personnalisées.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Site Vitrine L'OR ET L'ÉLÉGANCE",
+    "category": "Site Vitrine",
+    "client": "L'OR et L'ÉLÉGANCE",
+    "year": "2025",
+    "description": "Site vitrine pour une conseillère en image.",
+    "image": "lovable-uploads/loretlelegance.jpg",
+    "link": "https://gold-wallaby-994940.hostingersite.com/",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "GitHub"],
+    "challenge": "Concevoir un site élégant qui reflète l'expertise en conseil d'image avec une prise de rendez-vous simplifiée.",
+    "solution": "Création d'un site à l'esthétique raffinée avec un système de réservation intégré et une présentation claire des prestations.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  }
+]

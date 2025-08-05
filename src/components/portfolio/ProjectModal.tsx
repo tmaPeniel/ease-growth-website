@@ -1,6 +1,7 @@
 
-import { Code, Award, LightbulbIcon } from "lucide-react";
+import { Code, Award, LightbulbIcon, ExternalLink, Camera } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { type Project } from "@/data/projects";
 
 interface ProjectModalProps {
@@ -80,6 +81,43 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {project.solution}
             </p>
           </div>
+
+          {/* Screenshots Section */}
+          {project.screenshots && project.screenshots.length > 0 && (
+            <div className="mb-6">
+              <div className="flex items-center mb-3">
+                <Camera className="w-5 h-5 mr-2 text-gold" />
+                <h3 className="text-lg font-bold">Aperçu du projet</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.screenshots.map((screenshot, index) => (
+                  <img 
+                    key={index}
+                    src={screenshot} 
+                    alt={`${project.title} - Aperçu ${index + 1}`}
+                    className="w-full h-48 object-cover rounded-lg border border-gray-200"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Project Link */}
+          {project.link && project.link !== "#" && (
+            <div className="pt-4 border-t border-gray-200">
+              <Button asChild className="w-full">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Voir le projet en ligne
+                </a>
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>
