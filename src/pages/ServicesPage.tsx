@@ -25,11 +25,12 @@ const ServicesPage = () => {
     {
       id: "marketing",
       icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
-      title: "Marketing digital",
-      description: "Des stratégies digitales efficaces pour augmenter votre visibilité en ligne et attirer plus de clients.",
+      title: "Web marketing (SEO et SEA)",
+      description: "Des stratégies de référencement naturel et payant pour augmenter votre visibilité en ligne et attirer plus de clients.",
       features: [
         "Référencement naturel (SEO)",
-        "Publicité Google Ads"
+        "Publicité Google Ads (SEA)",
+        "Analyse et optimisation des performances"
       ],
       image: "/lovable-uploads/SEO-marketing-digital.jpg"
     },

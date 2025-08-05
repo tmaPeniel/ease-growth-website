@@ -11,8 +11,8 @@ const services = [
   },
   {
     icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
-    title: "Marketing digital",
-    description: "Stratégies de référencement et de contenu pour augmenter votre visibilité en ligne.",
+    title: "Web marketing (SEO et SEA)",
+    description: "Stratégies de référencement naturel et payant pour augmenter votre visibilité en ligne.",
     link: "/services#marketing"
   },
   {

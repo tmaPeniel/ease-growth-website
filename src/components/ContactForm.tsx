@@ -128,7 +128,7 @@ const ContactForm = () => {
             <option value="">Sélectionnez un sujet</option>
             <option value="Création de site web">Création de site web</option>
             <option value="Formation">Formation</option>
-            <option value="Marketing digital">Marketing digital</option>
+            <option value="Web marketing (SEO et SEA)">Web marketing (SEO et SEA)</option>
             <option value="Autre">Autre</option>
           </select>
         </div>

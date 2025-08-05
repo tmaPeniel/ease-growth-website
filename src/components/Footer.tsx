@@ -16,7 +16,7 @@ const Footer = () => {
   const servicesLinks = [
     { name: "Création de site web", path: "/services" },
     { name: "Formation web", path: "/services" },
-    { name: "Marketing digital", path: "/services" }
+    { name: "Web marketing (SEO et SEA)", path: "/services" }
   ];
 
   // Utility links data
