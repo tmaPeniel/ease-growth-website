@@ -36,7 +36,7 @@ const AboutPage = () => {
     {
       name: "Péniel TAOUEMA",
       role: "Technique et Formation",
-      image: "https://images.unsplash.com/photo-1600878459138-e1123b37cb30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "lovable-uploads/penielEase.jpg",
       bio: "Développeur full-stack passionné par les technologies innovantes et l'expérience utilisateur."
     },
     {
