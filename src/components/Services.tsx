@@ -1,6 +1,7 @@
 
 import { Monitor, BookOpen, BarChart, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 // Import images
 import webCreationImg from "../assets/web-creation-service.jpg";
@@ -73,47 +74,54 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold animate-on-scroll overflow-hidden"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-                
-              </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-5">{service.description}</p>
-              {service.external ? (
-                <a 
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
-                >
-                  <span>{service.soon ? "Bientôt disponible" : "En savoir plus"}</span>
-                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              ) : (
-                <Link 
-                  to={service.link} 
-                  className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
-                >
-                  <span>En savoir plus</span>
-                  <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                </Link>
-              )}
-              </div>
-            </div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: false,
+          }}
+          className="w-full animate-on-scroll"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {services.map((service, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-5">{service.description}</p>
+                    {service.external ? (
+                      <a 
+                        href={service.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
+                      >
+                        <span>{service.soon ? "Bientôt disponible" : "En savoir plus"}</span>
+                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                      </a>
+                    ) : (
+                      <Link 
+                        to={service.link} 
+                        className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group"
+                      >
+                        <span>En savoir plus</span>
+                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
 
         <div className="mt-16 text-center animate-on-scroll">
           <Link 
