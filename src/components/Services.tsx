@@ -86,9 +86,7 @@ const Services = () => {
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
-                  {service.icon}
-                </div>
+                
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>

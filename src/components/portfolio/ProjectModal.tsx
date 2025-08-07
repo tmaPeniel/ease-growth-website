@@ -45,21 +45,6 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             {project.description}
           </p>
           
-          {/* Technologies Section */}
-          <div className="mb-6">
-            <div className="flex items-center mb-3">
-              <Code className="w-5 h-5 mr-2 text-gold" />
-              <h3 className="text-lg font-bold">Technologies utilisées</h3>
-            </div>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.technologies.map((tech, index) => (
-                <Badge key={index} variant="outline" className="bg-gray-100 hover:bg-gray-200 text-gray-800">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
-          
           {/* Challenge Section */}
           <div className="mb-6">
             <div className="flex items-center mb-3">
