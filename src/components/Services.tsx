@@ -1,41 +1,41 @@
 
-import { Monitor, BookOpen, BarChart } from "lucide-react";
+import { Monitor, BookOpen, BarChart, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
-    title: "🌐 Création de site web sur mesure",
+    title: "Création de site web sur mesure",
     description: "Sites vitrines, e-commerce, portfolios et applications web avec design moderne et optimisation complète.",
     link: "/services#web-creation"
   },
   {
     icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
-    title: "📈 Webmarketing (SEO et SEA)",
+    title: "Webmarketing (SEO et SEA)",
     description: "Référencement naturel et payant pour booster votre visibilité et générer du trafic qualifié.",
     link: "/services#marketing"
   },
   {
-    icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
-    title: "💻 Applications web & PWA",
+    icon: <Smartphone className="w-10 h-10 mb-4 text-gold" />,
+    title: "Applications web & PWA",
     description: "Développement d'applications web personnalisées et Progressive Web Apps performantes.",
     link: "/services#web-apps"
   },
   {
-    icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
-    title: "🧩 Applications métiers",
+    icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
+    title: "Applications métiers",
     description: "Solutions sur mesure pour digitaliser vos processus internes et améliorer votre productivité.",
     link: "/services#business-apps"
   },
   {
-    icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
-    title: "☁️ Hébergement sécurisé",
+    icon: <Cloud className="w-10 h-10 mb-4 text-gold" />,
+    title: "Hébergement sécurisé",
     description: "Solutions d'hébergement web fiables, rapides et protégées contre les cybermenaces.",
     link: "/services#hosting"
   },
   {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
-    title: "🎓 Formations web & data",
+    title: "Formations web & data",
     description: "Formations professionnelles en développement web et analyse de données.",
     link: "https://www.example.com/formations",
     external: true,
@@ -52,7 +52,7 @@ const Services = () => {
             NOS SERVICES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            🚀 Services digitaux pour booster votre croissance
+            Services digitaux pour booster votre croissance
           </h2>
           <p className="text-gray-600">
             Découvrez nos services digitaux conçus pour répondre aux enjeux actuels du marché et propulser votre transformation digitale.

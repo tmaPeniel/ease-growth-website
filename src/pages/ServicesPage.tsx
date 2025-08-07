@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { Monitor, BookOpen, BarChart, Users, Code, Database, Search } from "lucide-react";
+import { Monitor, BookOpen, BarChart, Users, Code, Database, Search, Smartphone, MonitorCog, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import MainService from "../components/MainService";
 import AdditionalService from "../components/AdditionalService";
@@ -10,7 +10,7 @@ const ServicesPage = () => {
     {
       id: "web-creation",
       icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
-      title: "🌐 Création de site web sur mesure",
+      title: "Création de site web sur mesure",
       description: "Nous concevons des sites web professionnels, modernes et optimisés pour tous les supports (ordinateur, mobile, tablette).",
       features: [
         "Site vitrine pour présenter vos services",
@@ -23,8 +23,8 @@ const ServicesPage = () => {
     },
     {
       id: "web-apps",
-      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
-      title: "💻 Développement d'applications web & PWA",
+      icon: <Smartphone className="w-12 h-12 mb-6 text-gold" />,
+      title: "Développement d'applications web & PWA",
       description: "Nous développons des applications web personnalisées et des Progressive Web Apps (PWA) alliant performance, sécurité et accessibilité hors ligne.",
       features: [
         "Applications web personnalisées",
@@ -37,8 +37,8 @@ const ServicesPage = () => {
     },
     {
       id: "business-apps",
-      icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
-      title: "🧩 Création d'applications métiers",
+      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
+      title: "Création d'applications métiers",
       description: "Nous concevons des applications métiers sur mesure pour digitaliser vos processus internes.",
       features: [
         "Gestion commerciale digitalisée",
@@ -51,8 +51,8 @@ const ServicesPage = () => {
     },
     {
       id: "refonte-maintenance",
-      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
-      title: "🔁 Refonte et maintenance de site web",
+      icon: <MonitorCog className="w-12 h-12 mb-6 text-gold" />,
+      title: "Refonte et maintenance de site web",
       description: "Votre site web est obsolète ou ne convertit pas ? Nous vous proposons une refonte complète, tant sur le plan graphique que technique.",
       features: [
         "Refonte graphique moderne",
@@ -65,8 +65,8 @@ const ServicesPage = () => {
     },
     {
       id: "hosting",
-      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
-      title: "☁️ Hébergement web sécurisé",
+      icon: <Cloud className="w-12 h-12 mb-6 text-gold" />,
+      title: "Hébergement web sécurisé",
       description: "Nous offrons des solutions d'hébergement web fiables, rapides et sécurisées pour vos sites et applications.",
       features: [
         "Serveurs optimisés haute performance",
@@ -80,7 +80,7 @@ const ServicesPage = () => {
     {
       id: "marketing",
       icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
-      title: "📈 Webmarketing : SEO & SEA",
+      title: "Webmarketing : SEO & SEA",
       description: "Optimisez votre visibilité avec nos services de webmarketing pour générer plus de trafic qualifié et booster votre chiffre d'affaires.",
       features: [
         "Référencement naturel (SEO) : amélioration positionnement Google",
@@ -94,7 +94,7 @@ const ServicesPage = () => {
     {
       id: "formation",
       icon: <BookOpen className="w-12 h-12 mb-6 text-gold" />,
-      title: "🎓 Formations en développement web & data",
+      title: "Formations en développement web & data",
       description: "Nous proposons des formations professionnelles dans les domaines du développement web et de la data.",
       features: [
         "Développement web (HTML, CSS, JavaScript, frameworks)",
@@ -181,51 +181,36 @@ const ServicesPage = () => {
           {/* Why choose us section */}
           <div className="bg-gradient-to-br from-gold/5 to-transparent rounded-2xl p-8 md:p-12 mt-20">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              ✅ Pourquoi faire appel à notre agence digitale ?
+              Pourquoi faire appel à notre agence digitale ?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="text-center">
-                <h3 className="font-bold mb-2">🎯 Approche centrée sur vos objectifs</h3>
+                <h3 className="font-bold mb-2">Approche centrée sur vos objectifs</h3>
                 <p className="text-gray-600 text-sm">Solutions alignées avec votre stratégie business</p>
               </div>
               <div className="text-center">
-                <h3 className="font-bold mb-2">👥 Équipe passionnée et expérimentée</h3>
+                <h3 className="font-bold mb-2">Équipe passionnée et expérimentée</h3>
                 <p className="text-gray-600 text-sm">Experts réactifs à votre service</p>
               </div>
               <div className="text-center">
-                <h3 className="font-bold mb-2">🎨 Solutions personnalisées</h3>
+                <h3 className="font-bold mb-2">Solutions personnalisées</h3>
                 <p className="text-gray-600 text-sm">Pas de modèles préconçus, tout sur mesure</p>
               </div>
               <div className="text-center">
-                <h3 className="font-bold mb-2">📊 Suivi rigoureux</h3>
+                <h3 className="font-bold mb-2">Suivi rigoureux</h3>
                 <p className="text-gray-600 text-sm">Transparence totale sur l'avancement</p>
               </div>
               <div className="text-center">
-                <h3 className="font-bold mb-2">📈 Résultats mesurables</h3>
+                <h3 className="font-bold mb-2">Résultats mesurables</h3>
                 <p className="text-gray-600 text-sm">Impact concret sur votre croissance</p>
               </div>
               <div className="text-center">
-                <h3 className="font-bold mb-2">🚀 Innovation continue</h3>
+                <h3 className="font-bold mb-2">Innovation continue</h3>
                 <p className="text-gray-600 text-sm">Technologies de pointe et tendances actuelles</p>
               </div>
             </div>
           </div>
 
-          {/* Final CTA */}
-          <div className="text-center mt-16 bg-black text-white rounded-2xl p-8 md:p-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              📩 Vous avez un projet ? Discutons-en dès aujourd'hui !
-            </h2>
-            <p className="text-gray-300 mb-6">
-              Transformons ensemble vos idées en succès digital
-            </p>
-            <Link 
-              to="/contact"
-              className="inline-block px-8 py-4 bg-gold text-black hover:bg-gold/90 transition-all duration-300 rounded-full text-base font-medium"
-            >
-              Démarrer mon projet
-            </Link>
-          </div>
         </div>
       </section>
     </Layout>
