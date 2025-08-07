@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Calendar } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 interface FormData {
   name: string;
@@ -19,6 +20,7 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -150,27 +152,56 @@ const ContactForm = () => {
         ></textarea>
       </div>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className={`w-full py-3 px-4 rounded-lg bg-black text-white font-medium flex items-center justify-center transition-all duration-300 ${
-          isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:bg-gold hover:text-black"
-        }`}
-      >
-        {isSubmitting ? (
-          <>
-            <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            Envoi en cours...
-          </>
-        ) : (
-          <>
-            Envoyer le message <Send className="ml-2 w-4 h-4" />
-          </>
-        )}
-      </button>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={`py-3 px-4 rounded-lg bg-black text-white font-medium flex items-center justify-center transition-all duration-300 ${
+            isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:bg-gold hover:text-black"
+          }`}
+        >
+          {isSubmitting ? (
+            <>
+              <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Envoi en cours...
+            </>
+          ) : (
+            <>
+              Envoyer le message <Send className="ml-2 w-4 h-4" />
+            </>
+          )}
+        </button>
+
+        <Dialog open={isCalendlyOpen} onOpenChange={setIsCalendlyOpen}>
+          <DialogTrigger asChild>
+            <button
+              type="button"
+              className="py-3 px-4 rounded-lg border border-gold text-gold font-medium flex items-center justify-center transition-all duration-300 hover:bg-gold hover:text-black"
+            >
+              <Calendar className="mr-2 w-4 h-4" />
+              Prendre rendez-vous
+            </button>
+          </DialogTrigger>
+          <DialogContent className="max-w-4xl h-[80vh]">
+            <DialogHeader>
+              <DialogTitle>Réserver un créneau</DialogTitle>
+            </DialogHeader>
+            <div className="w-full h-full">
+              <iframe
+                src="https://calendly.com/votre-calendly"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Calendly - Réserver un rendez-vous"
+                className="rounded-lg"
+              ></iframe>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </div>
     </form>
   );
 };

@@ -81,9 +81,9 @@ const Services = () => {
           }}
           className="w-full animate-on-scroll"
         >
-          <CarouselContent className="-ml-1 md:-ml-3">
+          <CarouselContent className="-ml-2 md:-ml-3">
             {services.map((service, index) => (
-              <CarouselItem key={index} className="pl-1 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
                 <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
                   <div className="relative h-40 md:h-44 lg:h-48 overflow-hidden">
                     <img 
@@ -119,10 +119,21 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+          <CarouselPrevious className="hidden lg:hidden" />
+          <CarouselNext className="hidden lg:hidden" />
         </Carousel>
 
+        {/* Desktop scroll indicators */}
+        <div className="hidden lg:flex justify-center mt-6 space-x-2">
+          <div className="flex items-center space-x-2 text-sm text-gray-500">
+            <div className="flex space-x-1">
+              <div className="w-2 h-2 bg-gold rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+            <span>Faites défiler pour voir plus de services</span>
+          </div>
+        </div>
         <div className="mt-16 text-center animate-on-scroll">
           <Link 
             to="/services" 
