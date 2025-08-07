@@ -81,18 +81,18 @@ const Services = () => {
           }}
           className="w-full animate-on-scroll"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-1 md:-ml-3">
             {services.map((service, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-1 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
                 <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 md:h-44 lg:h-48 overflow-hidden">
                     <img 
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <div className="p-8">
+                  <div className="p-4 md:p-6 lg:p-8">
                     <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                     <p className="text-gray-600 mb-5">{service.description}</p>
                     {service.external ? (
