@@ -1,7 +1,9 @@
 
+import { useState, useEffect } from "react";
 import { Monitor, BookOpen, BarChart, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 // Import images
 import webCreationImg from "../assets/web-creation-service.jpg";
@@ -59,6 +61,34 @@ const services = [
 ];
 
 const Services = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+
+    // Auto-scroll every 5 seconds for services
+    const interval = setInterval(() => {
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0);
+      }
+    }, 5000);
+
+    return () => {
+      api?.off("select", onSelect);
+      clearInterval(interval);
+    };
+  }, [api]);
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -75,26 +105,40 @@ const Services = () => {
         </div>
 
         <Carousel
+          setApi={setApi}
           opts={{
-            align: "start",
-            loop: false,
+            align: "center",
+            loop: true,
           }}
           className="w-full animate-on-scroll"
         >
-          <CarouselContent className="-ml-2 md:-ml-3">
+          <CarouselContent className="-ml-1 md:-ml-2">
             {services.map((service, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
-                <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
-                  <div className="relative h-40 md:h-44 lg:h-48 overflow-hidden">
+              <CarouselItem key={index} className={`pl-1 md:pl-2 transition-all duration-500 ${
+                index === current 
+                  ? "basis-full md:basis-3/5 lg:basis-1/2" 
+                  : "basis-4/5 md:basis-2/5 lg:basis-1/3 opacity-70"
+              }`}>
+                <div className={`glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full ${
+                  index === current ? "shadow-lg scale-105" : ""
+                }`}>
+                  <div className={`relative overflow-hidden ${
+                    index === current ? "h-48 md:h-56 lg:h-64" : "h-40 md:h-44 lg:h-48"
+                  }`}>
                     <img 
                       src={service.image} 
                       alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </div>
-                  <div className="p-4 md:p-6 lg:p-8">
-                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-5">{service.description}</p>
+                  <div className={`${index === current ? "p-6 md:p-8" : "p-4 md:p-6"}`}>
+                    {service.icon}
+                    <h3 className={`font-bold mb-3 ${
+                      index === current ? "text-xl md:text-2xl" : "text-lg md:text-xl"
+                    }`}>{service.title}</h3>
+                    <p className={`text-gray-600 mb-5 ${
+                      index === current ? "text-base" : "text-sm"
+                    }`}>{service.description}</p>
                     {service.external ? (
                       <a 
                         href={service.link}
@@ -119,20 +163,19 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:hidden" />
-          <CarouselNext className="hidden lg:hidden" />
         </Carousel>
 
-        {/* Desktop scroll indicators */}
-        <div className="hidden lg:flex justify-center mt-6 space-x-2">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-gold rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-            </div>
-            <span>Faites défiler pour voir plus de services</span>
-          </div>
+        {/* Indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {services.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === current ? "bg-gold w-8" : "bg-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
         </div>
         <div className="mt-16 text-center animate-on-scroll">
           <Link 
