@@ -21,20 +21,17 @@ const Portfolio = () => {
 
     api.on("select", onSelect);
 
-    // Auto-scroll every 4 seconds
+    // Auto-scroll every 4 seconds with smooth transitions
     const interval = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0);
-      }
+      const nextIndex = (current + 1) % projects.length;
+      api.scrollTo(nextIndex, true); // true for smooth animation
     }, 4000);
 
     return () => {
       api?.off("select", onSelect);
       clearInterval(interval);
     };
-  }, [api]);
+  }, [api, current]);
 
   return (
     <section id="portfolio" className="section-padding bg-gray-50 relative overflow-hidden">
@@ -56,6 +53,9 @@ const Portfolio = () => {
           opts={{
             align: "center",
             loop: true,
+            duration: 25,
+            dragFree: false,
+            containScroll: "trimSnaps",
           }}
           className="w-full animate-on-scroll"
         >

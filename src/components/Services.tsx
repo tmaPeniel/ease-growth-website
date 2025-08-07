@@ -75,20 +75,17 @@ const Services = () => {
 
     api.on("select", onSelect);
 
-    // Auto-scroll every 5 seconds for services
+    // Auto-scroll every 5 seconds for services with smooth transitions
     const interval = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0);
-      }
+      const nextIndex = (current + 1) % services.length;
+      api.scrollTo(nextIndex, true); // true for smooth animation
     }, 5000);
 
     return () => {
       api?.off("select", onSelect);
       clearInterval(interval);
     };
-  }, [api]);
+  }, [api, current]);
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -109,6 +106,9 @@ const Services = () => {
           opts={{
             align: "center",
             loop: true,
+            duration: 25,
+            dragFree: false,
+            containScroll: "trimSnaps",
           }}
           className="w-full animate-on-scroll"
         >
