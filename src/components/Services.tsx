@@ -5,20 +5,38 @@ import { Link } from "react-router-dom";
 const services = [
   {
     icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
-    title: "Création de site web",
-    description: "Sites vitrines, e-commerce ou applications web sur mesure avec un design moderne et responsive.",
+    title: "🌐 Création de site web sur mesure",
+    description: "Sites vitrines, e-commerce, portfolios et applications web avec design moderne et optimisation complète.",
     link: "/services#web-creation"
   },
   {
     icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
-    title: "Web marketing (SEO et SEA)",
-    description: "Stratégies de référencement naturel et payant pour augmenter votre visibilité en ligne.",
+    title: "📈 Webmarketing (SEO et SEA)",
+    description: "Référencement naturel et payant pour booster votre visibilité et générer du trafic qualifié.",
     link: "/services#marketing"
   },
   {
+    icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
+    title: "💻 Applications web & PWA",
+    description: "Développement d'applications web personnalisées et Progressive Web Apps performantes.",
+    link: "/services#web-apps"
+  },
+  {
+    icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
+    title: "🧩 Applications métiers",
+    description: "Solutions sur mesure pour digitaliser vos processus internes et améliorer votre productivité.",
+    link: "/services#business-apps"
+  },
+  {
+    icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
+    title: "☁️ Hébergement sécurisé",
+    description: "Solutions d'hébergement web fiables, rapides et protégées contre les cybermenaces.",
+    link: "/services#hosting"
+  },
+  {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
-    title: "Formation web",
-    description: "Formations personnalisées pour maîtriser les outils web.",
+    title: "🎓 Formations web & data",
+    description: "Formations professionnelles en développement web et analyse de données.",
     link: "https://www.example.com/formations",
     external: true,
     soon: true
@@ -34,10 +52,10 @@ const Services = () => {
             NOS SERVICES
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Solutions digitales complètes pour votre entreprise
+            🚀 Services digitaux pour booster votre croissance
           </h2>
           <p className="text-gray-600">
-            Nous proposons une gamme de services pensés pour répondre à tous vos besoins numériques et vous aider à atteindre vos objectifs.
+            Découvrez nos services digitaux conçus pour répondre aux enjeux actuels du marché et propulser votre transformation digitale.
           </p>
         </div>
 

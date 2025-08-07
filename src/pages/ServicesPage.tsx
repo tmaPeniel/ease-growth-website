@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import { Monitor, BookOpen, BarChart, Users, Code, Database, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 import MainService from "../components/MainService";
 import AdditionalService from "../components/AdditionalService";
 import ServicesHero from "../components/ServicesHero";
@@ -9,45 +10,103 @@ const ServicesPage = () => {
     {
       id: "web-creation",
       icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
-      title: "Création de site web",
-      description: "Des sites web professionnels, responsive et optimisés pour convertir vos visiteurs en clients.",
+      title: "🌐 Création de site web sur mesure",
+      description: "Nous concevons des sites web professionnels, modernes et optimisés pour tous les supports (ordinateur, mobile, tablette).",
       features: [
-        "Sites vitrines élégants",
-        "Portfolio présentant les réalisations des artisans",
-        "Sites avec CMS pour la gestion de contenu facile",
-        "E-commerce performants",
-        "Applications web sur mesure",
-        "Interfaces administrateur intuitives",
-        "Optimisation mobile"
+        "Site vitrine pour présenter vos services",
+        "Site e-commerce pour vendre vos produits en ligne", 
+        "Portfolio pour valoriser votre expertise",
+        "Site basé sur CMS (WordPress, Shopify, Webflow, etc.)",
+        "Sites SEO-friendly, rapides et pensés pour la conversion"
       ],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/lovable-uploads/EaseGrowth.png"
+    },
+    {
+      id: "web-apps",
+      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
+      title: "💻 Développement d'applications web & PWA",
+      description: "Nous développons des applications web personnalisées et des Progressive Web Apps (PWA) alliant performance, sécurité et accessibilité hors ligne.",
+      features: [
+        "Applications web personnalisées",
+        "Progressive Web Apps (PWA)",
+        "Performance et sécurité optimales",
+        "Fonctionnement hors ligne",
+        "Solutions robustes et évolutives"
+      ],
+      image: "/lovable-uploads/EaseGrowthLorenzo.jpg"
+    },
+    {
+      id: "business-apps",
+      icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
+      title: "🧩 Création d'applications métiers",
+      description: "Nous concevons des applications métiers sur mesure pour digitaliser vos processus internes.",
+      features: [
+        "Gestion commerciale digitalisée",
+        "Outils RH personnalisés",
+        "Solutions logistique et comptabilité",
+        "Amélioration de la productivité",
+        "Développement spécifique à votre activité"
+      ],
+      image: "/lovable-uploads/EaseKarl.jpg"
+    },
+    {
+      id: "refonte-maintenance",
+      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
+      title: "🔁 Refonte et maintenance de site web",
+      description: "Votre site web est obsolète ou ne convertit pas ? Nous vous proposons une refonte complète, tant sur le plan graphique que technique.",
+      features: [
+        "Refonte graphique moderne",
+        "Optimisation technique complète",
+        "Maintenance sécurisée continue",
+        "Mises à jour régulières",
+        "Performance garantie"
+      ],
+      image: "/lovable-uploads/loretlelegance.jpg"
+    },
+    {
+      id: "hosting",
+      icon: <Monitor className="w-12 h-12 mb-6 text-gold" />,
+      title: "☁️ Hébergement web sécurisé",
+      description: "Nous offrons des solutions d'hébergement web fiables, rapides et sécurisées pour vos sites et applications.",
+      features: [
+        "Serveurs optimisés haute performance",
+        "Temps de chargement rapide",
+        "Haute disponibilité garantie",
+        "Protection renforcée contre les cybermenaces",
+        "Support technique 24/7"
+      ],
+      image: "/lovable-uploads/Sankhiny.png"
     },
     {
       id: "marketing",
       icon: <BarChart className="w-12 h-12 mb-6 text-gold" />,
-      title: "Web marketing (SEO et SEA)",
-      description: "Des stratégies de référencement naturel et payant pour augmenter votre visibilité en ligne et attirer plus de clients.",
+      title: "📈 Webmarketing : SEO & SEA",
+      description: "Optimisez votre visibilité avec nos services de webmarketing pour générer plus de trafic qualifié et booster votre chiffre d'affaires.",
       features: [
-        "Référencement naturel (SEO)",
-        "Publicité Google Ads (SEA)",
-        "Analyse et optimisation des performances"
+        "Référencement naturel (SEO) : amélioration positionnement Google",
+        "Référencement payant (SEA) : campagnes Google Ads ciblées",
+        "Audit SEO et stratégie de mots-clés",
+        "Netlinking et optimisation de contenu",
+        "Rapports de performance détaillés"
       ],
       image: "/lovable-uploads/SEO-marketing-digital.jpg"
     },
     {
-      id: "training",
+      id: "formation",
       icon: <BookOpen className="w-12 h-12 mb-6 text-gold" />,
-      title: "Formation web",
-      description: "Des formations personnalisées pour vous permettre de maîtriser les outils web et gérer votre site en toute autonomie.",
+      title: "🎓 Formations en développement web & data",
+      description: "Nous proposons des formations professionnelles dans les domaines du développement web et de la data.",
       features: [
-        "PowerBI",
-        "HTML/CSS pour débutants",
-        "Javascript pour le Web"
+        "Développement web (HTML, CSS, JavaScript, frameworks)",
+        "Data (analyse, visualisation, bases de données)",
+        "Parcours adaptés à votre niveau",
+        "Formation des équipes internes",
+        "Montée en compétence personnalisée"
       ],
       external: true,
       externalLink: "https://www.example.com/formations",
       soon: true,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/lovable-uploads/penielEase.jpg"
     }
   ];
 
@@ -117,6 +176,55 @@ const ServicesPage = () => {
                 index={index}
               />
             ))}
+          </div>
+
+          {/* Why choose us section */}
+          <div className="bg-gradient-to-br from-gold/5 to-transparent rounded-2xl p-8 md:p-12 mt-20">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+              ✅ Pourquoi faire appel à notre agence digitale ?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="text-center">
+                <h3 className="font-bold mb-2">🎯 Approche centrée sur vos objectifs</h3>
+                <p className="text-gray-600 text-sm">Solutions alignées avec votre stratégie business</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">👥 Équipe passionnée et expérimentée</h3>
+                <p className="text-gray-600 text-sm">Experts réactifs à votre service</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">🎨 Solutions personnalisées</h3>
+                <p className="text-gray-600 text-sm">Pas de modèles préconçus, tout sur mesure</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">📊 Suivi rigoureux</h3>
+                <p className="text-gray-600 text-sm">Transparence totale sur l'avancement</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">📈 Résultats mesurables</h3>
+                <p className="text-gray-600 text-sm">Impact concret sur votre croissance</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold mb-2">🚀 Innovation continue</h3>
+                <p className="text-gray-600 text-sm">Technologies de pointe et tendances actuelles</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Final CTA */}
+          <div className="text-center mt-16 bg-black text-white rounded-2xl p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              📩 Vous avez un projet ? Discutons-en dès aujourd'hui !
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Transformons ensemble vos idées en succès digital
+            </p>
+            <Link 
+              to="/contact"
+              className="inline-block px-8 py-4 bg-gold text-black hover:bg-gold/90 transition-all duration-300 rounded-full text-base font-medium"
+            >
+              Démarrer mon projet
+            </Link>
           </div>
         </div>
       </section>
