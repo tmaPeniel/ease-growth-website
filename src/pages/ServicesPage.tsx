@@ -5,6 +5,15 @@ import MainService from "../components/MainService";
 import AdditionalService from "../components/AdditionalService";
 import ServicesHero from "../components/ServicesHero";
 
+// Import images
+import webCreationImg from "../assets/web-creation-service.jpg";
+import webmarketingImg from "../assets/webmarketing-service.jpg";
+import webAppsImg from "../assets/web-apps-service.jpg";
+import businessAppsImg from "../assets/business-apps-service.jpg";
+import hostingImg from "../assets/hosting-service.jpg";
+import formationImg from "../assets/formation-service.jpg";
+import refonteImg from "../assets/refonte-service.jpg";
+
 const ServicesPage = () => {
   const mainServices = [
     {
@@ -19,7 +28,7 @@ const ServicesPage = () => {
         "Site basé sur CMS (WordPress, Shopify, Webflow, etc.)",
         "Sites SEO-friendly, rapides et pensés pour la conversion"
       ],
-      image: "/lovable-uploads/EaseGrowth.png"
+      image: webCreationImg
     },
     {
       id: "web-apps",
@@ -33,7 +42,7 @@ const ServicesPage = () => {
         "Fonctionnement hors ligne",
         "Solutions robustes et évolutives"
       ],
-      image: "/lovable-uploads/EaseGrowthLorenzo.jpg"
+      image: webAppsImg
     },
     {
       id: "business-apps",
@@ -47,7 +56,7 @@ const ServicesPage = () => {
         "Amélioration de la productivité",
         "Développement spécifique à votre activité"
       ],
-      image: "/lovable-uploads/EaseKarl.jpg"
+      image: businessAppsImg
     },
     {
       id: "refonte-maintenance",
@@ -61,7 +70,7 @@ const ServicesPage = () => {
         "Mises à jour régulières",
         "Performance garantie"
       ],
-      image: "/lovable-uploads/loretlelegance.jpg"
+      image: refonteImg
     },
     {
       id: "hosting",
@@ -75,7 +84,7 @@ const ServicesPage = () => {
         "Protection renforcée contre les cybermenaces",
         "Support technique 24/7"
       ],
-      image: "/lovable-uploads/Sankhiny.png"
+      image: hostingImg
     },
     {
       id: "marketing",
@@ -89,7 +98,7 @@ const ServicesPage = () => {
         "Netlinking et optimisation de contenu",
         "Rapports de performance détaillés"
       ],
-      image: "/lovable-uploads/SEO-marketing-digital.jpg"
+      image: webmarketingImg
     },
     {
       id: "formation",
@@ -106,7 +115,7 @@ const ServicesPage = () => {
       external: true,
       externalLink: "https://www.example.com/formations",
       soon: true,
-      image: "/lovable-uploads/penielEase.jpg"
+      image: formationImg
     }
   ];
 

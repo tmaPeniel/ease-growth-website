@@ -2,36 +2,49 @@
 import { Monitor, BookOpen, BarChart, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// Import images
+import webCreationImg from "../assets/web-creation-service.jpg";
+import webmarketingImg from "../assets/webmarketing-service.jpg";
+import webAppsImg from "../assets/web-apps-service.jpg";
+import businessAppsImg from "../assets/business-apps-service.jpg";
+import hostingImg from "../assets/hosting-service.jpg";
+import formationImg from "../assets/formation-service.jpg";
+
 const services = [
   {
     icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
     title: "Création de site web sur mesure",
     description: "Sites vitrines, e-commerce, portfolios et applications web avec design moderne et optimisation complète.",
-    link: "/services#web-creation"
+    link: "/services#web-creation",
+    image: webCreationImg
   },
   {
     icon: <BarChart className="w-10 h-10 mb-4 text-gold" />,
     title: "Webmarketing (SEO et SEA)",
     description: "Référencement naturel et payant pour booster votre visibilité et générer du trafic qualifié.",
-    link: "/services#marketing"
+    link: "/services#marketing",
+    image: webmarketingImg
   },
   {
     icon: <Smartphone className="w-10 h-10 mb-4 text-gold" />,
     title: "Applications web & PWA",
     description: "Développement d'applications web personnalisées et Progressive Web Apps performantes.",
-    link: "/services#web-apps"
+    link: "/services#web-apps",
+    image: webAppsImg
   },
   {
     icon: <Monitor className="w-10 h-10 mb-4 text-gold" />,
     title: "Applications métiers",
     description: "Solutions sur mesure pour digitaliser vos processus internes et améliorer votre productivité.",
-    link: "/services#business-apps"
+    link: "/services#business-apps",
+    image: businessAppsImg
   },
   {
     icon: <Cloud className="w-10 h-10 mb-4 text-gold" />,
     title: "Hébergement sécurisé",
     description: "Solutions d'hébergement web fiables, rapides et protégées contre les cybermenaces.",
-    link: "/services#hosting"
+    link: "/services#hosting",
+    image: hostingImg
   },
   {
     icon: <BookOpen className="w-10 h-10 mb-4 text-gold" />,
@@ -39,7 +52,8 @@ const services = [
     description: "Formations professionnelles en développement web et analyse de données.",
     link: "https://www.example.com/formations",
     external: true,
-    soon: true
+    soon: true,
+    image: formationImg
   }
 ];
 
@@ -63,12 +77,22 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="glass-card p-8 rounded-2xl transition-all duration-300 hover:shadow-gold animate-on-scroll"
+              className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold animate-on-scroll overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {service.icon}
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-5">{service.description}</p>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
+                  {service.icon}
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-5">{service.description}</p>
               {service.external ? (
                 <a 
                   href={service.link}
@@ -88,6 +112,7 @@ const Services = () => {
                   <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               )}
+              </div>
             </div>
           ))}
         </div>
