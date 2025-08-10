@@ -1,11 +1,16 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import ProjectFilters from "@/components/portfolio/ProjectFilters";
+import FeaturedProjectsCarousel from "@/components/portfolio/FeaturedProjectsCarousel";
 
 const Portfolio = () => {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [filter, setFilter] = useState<string>("all");
+
+  const categories = ["all", ...Array.from(new Set(projects.map(p => p.category)))];
+
+  const filteredProjects = filter === "all" ? projects : projects.filter(p => p.category === filter);
 
   return (
     <section id="portfolio" className="section-padding bg-gray-50 relative overflow-hidden">
@@ -22,45 +27,17 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {projects.map((project, index) => (
-            <Link 
-              key={project.id} 
-              to={project.link}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              className="group relative overflow-hidden rounded-xl animate-on-scroll"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div 
-                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90 z-10"
-              ></div>
-              
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-80 object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
-              />
-              
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transition-transform duration-300 group-hover:translate-y-0">
-                <span className="text-xs font-medium text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                  {project.category}
-                </span>
-                <h3 className="text-xl font-bold text-white mt-3 group-hover:text-gold transition-colors">
-                  {project.title}
-                </h3>
-                <div className="mt-2 overflow-hidden h-0 group-hover:h-8 transition-all duration-300">
-                  <span className="inline-flex items-center text-white/90 text-sm">
-                    <span>Voir le projet</span>
-                    <ArrowRight className="ml-1 w-4 h-4" />
-                  </span>
-                </div>
-              </div>
-            </Link>
-          ))}
+        <div className="mb-8">
+          <ProjectFilters
+            categories={categories}
+            activeFilter={filter}
+            onFilterChange={setFilter}
+          />
         </div>
 
-        <div className="mt-16 text-center animate-on-scroll">
+        <FeaturedProjectsCarousel projects={filteredProjects} />
+
+        <div className="mt-12 text-center animate-on-scroll">
           <Link 
             to="/portfolio" 
             className="inline-block px-6 py-3 border border-black hover:bg-black hover:text-white transition-colors duration-300 rounded-full"
