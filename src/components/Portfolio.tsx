@@ -1,37 +1,11 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import type { CarouselApi } from "@/components/ui/carousel";
 
 const Portfolio = () => {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    if (!api) return;
-
-    setCurrent(api.selectedScrollSnap());
-
-    const onSelect = () => {
-      setCurrent(api.selectedScrollSnap());
-    };
-
-    api.on("select", onSelect);
-
-    // Auto-scroll every 4 seconds with smooth transitions
-    const interval = setInterval(() => {
-      const nextIndex = (current + 1) % projects.length;
-      api.scrollTo(nextIndex, true); // true for smooth animation
-    }, 4000);
-
-    return () => {
-      api?.off("select", onSelect);
-      clearInterval(interval);
-    };
-  }, [api, current]);
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
     <section id="portfolio" className="section-padding bg-gray-50 relative overflow-hidden">
@@ -48,77 +22,43 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <Carousel
-          setApi={setApi}
-          opts={{
-            align: "center",
-            loop: true,
-            duration: 25,
-            dragFree: false,
-            containScroll: "trimSnaps",
-          }}
-          className="w-full animate-on-scroll"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {projects.map((project, index) => (
-              <CarouselItem key={project.id} className={`pl-2 md:pl-4 transition-all duration-500 ${
-                index === current 
-                  ? "basis-full md:basis-3/5 lg:basis-1/2" 
-                  : "basis-3/4 md:basis-2/5 lg:basis-1/3 opacity-60"
-              }`}>
-                <Link 
-                  to={project.link}
-                  className="group relative overflow-hidden rounded-xl block"
-                >
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90 z-10"
-                  ></div>
-                  
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className={`w-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105 ${
-                      index === current ? "h-96 md:h-[480px]" : "h-64 md:h-80"
-                    }`}
-                  />
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-20">
-                    <span className="text-xs font-medium text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
-                      {project.category}
-                    </span>
-                    <h3 className={`font-bold text-white mt-3 group-hover:text-gold transition-colors ${
-                      index === current ? "text-xl md:text-2xl" : "text-lg"
-                    }`}>
-                      {project.title}
-                    </h3>
-                    {index === current && (
-                      <p className="text-white/80 mt-2 text-sm md:text-base line-clamp-2">
-                        {project.description}
-                      </p>
-                    )}
-                    <div className="mt-3 flex items-center text-white/90 text-sm group-hover:text-gold transition-colors">
-                      <span>Voir le projet</span>
-                      <ArrowRight className="ml-1 w-4 h-4" />
-                    </div>
-                  </div>
-                </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          
-          {/* Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === current ? "bg-gold w-8" : "bg-gray-300"
-                }`}
-                onClick={() => api?.scrollTo(index)}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {projects.map((project, index) => (
+            <Link 
+              key={project.id} 
+              to={project.link}
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              className="group relative overflow-hidden rounded-xl animate-on-scroll"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div 
+                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90 z-10"
+              ></div>
+              
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-80 object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
               />
-            ))}
-          </div>
-        </Carousel>
+              
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transition-transform duration-300 group-hover:translate-y-0">
+                <span className="text-xs font-medium text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
+                  {project.category}
+                </span>
+                <h3 className="text-xl font-bold text-white mt-3 group-hover:text-gold transition-colors">
+                  {project.title}
+                </h3>
+                <div className="mt-2 overflow-hidden h-0 group-hover:h-8 transition-all duration-300">
+                  <span className="inline-flex items-center text-white/90 text-sm">
+                    <span>Voir le projet</span>
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
 
         <div className="mt-16 text-center animate-on-scroll">
           <Link 
