@@ -11,10 +11,10 @@ interface FeaturedProjectCardProps {
 const FeaturedProjectCard = ({ project, active, index }: FeaturedProjectCardProps) => {
   return (
     <article
-      className={`group relative overflow-hidden rounded-xl shadow-sm transition-all duration-500 ${
+      className={`group relative overflow-hidden rounded-xl shadow-sm transition-all duration-500 ease-out transform-gpu will-change-transform ${
         active ? "scale-100" : "scale-95 opacity-90"
-      } animate-on-scroll`}
-      style={{ animationDelay: `${index * 0.08}s` }}
+      }`}
+      data-index={index}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90 z-10" />
