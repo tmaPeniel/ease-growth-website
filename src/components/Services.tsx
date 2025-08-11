@@ -95,20 +95,46 @@ const Services = () => {
       }}>
           <CarouselContent className="-ml-2 md:-ml-3 px-4 md:px-6 py-4 md:py-6">
             {services.map((service, index) => <CarouselItem key={index} className="pl-2 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
-                <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
+                <div 
+                  className="group relative overflow-hidden rounded-xl transition-all duration-300 hover:shadow-gold h-full animate-on-scroll"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90 z-10"
+                  ></div>
+                  
                   <div className="relative h-40 md:h-44 lg:h-48 overflow-hidden">
-                    <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" 
+                    />
                   </div>
-                  <div className="p-4 md:p-6 lg:p-8">
-                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                    <p className="text-gray-600 mb-5">{service.description}</p>
-                    {service.external ? <a href={service.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group">
-                        <span>{service.soon ? "Bientôt disponible" : "En savoir plus"}</span>
-                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                      </a> : <Link to={service.link} className="text-sm font-medium text-gold hover:text-black inline-flex items-center transition-colors group">
-                        <span>En savoir plus</span>
-                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                      </Link>}
+                  
+                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-8 z-20 transition-transform duration-300 group-hover:translate-y-0">
+                    <span className="text-xs font-medium text-white/80 bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm mb-3 inline-block">
+                      {service.title.split(' ')[0]}
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/90 mb-5 text-sm">{service.description}</p>
+                    <div className="overflow-hidden h-0 group-hover:h-8 transition-all duration-300">
+                      {service.external ? 
+                        <a href={service.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-white/90 text-sm">
+                          <span>{service.soon ? "Bientôt disponible" : "En savoir plus"}</span>
+                          <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </a> : 
+                        <Link to={service.link} className="inline-flex items-center text-white/90 text-sm">
+                          <span>En savoir plus</span>
+                          <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </Link>
+                      }
+                    </div>
                   </div>
                 </div>
               </CarouselItem>)}
