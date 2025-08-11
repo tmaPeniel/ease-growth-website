@@ -119,8 +119,8 @@ const Services = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden lg:hidden" />
-          <CarouselNext className="hidden lg:hidden" />
+          <CarouselPrevious className="hidden lg:flex" />
+          <CarouselNext className="hidden lg:flex" />
         </Carousel>
 
         {/* Desktop scroll indicators */}
