@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Site vitrine C'EST DANS LA BOÎTE",
+    "title": "C'EST DANS LA BOÎTE",
     "category": "Site Vitrine",
     "client": "C'EST DANS LA BOÎTE",
     "year": "2025",
@@ -18,13 +18,13 @@
   },
   {
     "id": 2,
-    "title": "Site vitrine YADAQ",
+    "title": "YADAQ",
     "category": "Site Vitrine",
     "client": "YADAQ",
     "year": "2024",
     "description": "Site vitrine pour une agence de communication avec réservation en ligne et présentation des services.",
     "image": "lovable-uploads/Blanc et Cercle Rouge Art Logo.jpg",
-    "link": "https://www.yadaq.com/",
+    "link": "#",
     "technologies": ["Odoo", "Calendly"],
     "challenge": "Mettre en place une identité visuelle forte et cohérente pour une agence de communication qui souhaite démontrer son expertise.",
     "solution": "Création d'un design épuré mais impactant avec des animations subtiles et une présentation claire des services proposés.",
@@ -35,7 +35,7 @@
   },
   {
     "id": 3,
-    "title": "Plateforme e-learning EASE GROWTH Formation",
+    "title": "EASE GROWTH Formation",
     "category": "E-Learning",
     "client": "Ease Growth Formation",
     "year": "2025",
@@ -52,7 +52,7 @@
   },
   {
     "id": 4,
-    "title": "Site E-Commerce SANKHINY",
+    "title": "SANKHINY",
     "category": "E-Commerce",
     "client": "Sankhiny",
     "year": "2025",
@@ -69,7 +69,7 @@
   },
   {
     "id": 5,
-    "title": "Site Vitrine L'OR ET L'ÉLÉGANCE",
+    "title": "L'OR ET L'ÉLÉGANCE",
     "category": "Site Vitrine",
     "client": "L'OR et L'ÉLÉGANCE",
     "year": "2025",
@@ -79,6 +79,23 @@
     "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "GitHub"],
     "challenge": "Concevoir un site élégant qui reflète l'expertise en conseil d'image avec une prise de rendez-vous simplifiée.",
     "solution": "Création d'un site à l'esthétique raffinée avec un système de réservation intégré et une présentation claire des prestations.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "FI Normandie",
+    "category": "Site Vitrine",
+    "client": "FI Normandie",
+    "year": "2025",
+    "description": "Site vitrine pour un groupe communautaire.",
+    "image": "assets/FILogo.jpg",
+    "link": "https://finormandie.lovable.app/",
+    "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "GitHub"],
+    "challenge": "Concevoir un site qui met en avant les groupes et permet aux membres de s'inscrire.",
+    "solution": "Création d'un site à l'esthétique raffinée avec un système d'inscription.",
     "screenshots": [
       "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
