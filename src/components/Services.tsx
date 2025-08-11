@@ -81,7 +81,7 @@ const Services = () => {
           }}
           className="w-full animate-on-scroll"
         >
-          <CarouselContent className="-ml-2 md:-ml-3">
+          <CarouselContent className="-ml-2 md:-ml-3 py-4 md:py-6">
             {services.map((service, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-3 basis-4/5 md:basis-2/5 lg:basis-1/3">
                 <div className="glass-card rounded-2xl transition-all duration-300 hover:shadow-gold overflow-hidden h-full">
