@@ -185,19 +185,27 @@ const ContactForm = () => {
               Prendre rendez-vous
             </button>
           </DialogTrigger>
-          <DialogContent className="max-w-4xl h-[600px]">
-            <DialogHeader>
-              <DialogTitle>Réserver un créneau</DialogTitle>
+          <DialogContent className="max-w-5xl h-[700px] p-0 overflow-hidden bg-gradient-to-br from-white to-gray-50 border-none shadow-2xl">
+            <DialogHeader className="px-8 pt-8 pb-4 bg-gradient-to-r from-primary to-primary/80 text-white">
+              <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+                <Calendar className="w-6 h-6" />
+                Réservez votre consultation gratuite
+              </DialogTitle>
+              <p className="text-white/90 text-sm mt-2 font-normal">
+                Choisissez le créneau qui vous convient le mieux pour discuter de votre projet
+              </p>
             </DialogHeader>
-            <div className="w-full h-full">
-              <iframe
-                src="https://calendly.com/penieltma/30min"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Calendly - Réserver un rendez-vous"
-                className="rounded-lg"
-              ></iframe>
+            <div className="flex-1 p-6">
+              <div className="h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <iframe
+                  src="https://calendly.com/penieltma/30min"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  title="Calendly - Réserver un rendez-vous"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </DialogContent>
         </Dialog>
