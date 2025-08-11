@@ -20,10 +20,10 @@ const Portfolio = () => {
             NOTRE PORTFOLIO
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Projets réalisés avec passion
+            Portfolio Création Sites Web Rouen : Nos Réalisations
           </h2>
           <p className="text-gray-600 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Découvrez quelques-unes de nos réalisations récentes qui ont permis à nos clients d'atteindre leurs objectifs.
+            Découvrez nos projets de création de sites internet et d'applications web réalisés pour nos clients à Rouen et en Normandie. Chaque projet reflète notre expertise en développement web sur mesure.
           </p>
         </div>
 
