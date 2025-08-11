@@ -141,46 +141,39 @@ const Services = () => {
           <CarouselNext className="hidden lg:flex" />
         </Carousel>
 
-        {/* Navigation buttons for mobile */}
-        <div className="flex justify-center items-center gap-4 mt-8 lg:hidden animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
+        {/* Navigation buttons */}
+        <div className="flex justify-center items-center gap-4 mt-6 animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
           <button
             onClick={() => api?.scrollPrev()}
             className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
-            aria-label="Carte précédente"
+            aria-label="Service précédent"
           >
             <ChevronLeft size={18} />
           </button>
-          <div className="flex items-center gap-2">
-            {Array.from({ length: count }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index + 1 === current ? 'bg-gold' : 'bg-gray-300'
-                }`}
-                aria-label={`Aller à la carte ${index + 1}`}
-              />
-            ))}
-          </div>
+
+          {/* Dots */}
+          {count > 1 && (
+            <div className="flex items-center gap-2">
+              {Array.from({ length: count }).map((_, i) => (
+                <button 
+                  key={i} 
+                  onClick={() => api?.scrollTo(i)} 
+                  aria-label={`Aller au slide ${i + 1}`} 
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i + 1 === current ? "w-6 bg-gold" : "w-2 bg-black/30 hover:bg-black/50"
+                  }`} 
+                />
+              ))}
+            </div>
+          )}
+
           <button
             onClick={() => api?.scrollNext()}
             className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
-            aria-label="Carte suivante"
+            aria-label="Service suivant"
           >
             <ChevronRight size={18} />
           </button>
-        </div>
-
-        {/* Desktop scroll indicators */}
-        <div className="hidden lg:flex justify-center mt-6 space-x-2">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <div className="flex space-x-1">
-              <div className="w-2 h-2 bg-gold rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-            </div>
-            <span>Faites défiler pour voir plus de services</span>
-          </div>
         </div>
         <div className="mt-16 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
           <Link 
