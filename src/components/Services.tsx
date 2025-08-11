@@ -79,11 +79,11 @@ const Services = () => {
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="inline-block px-3 py-1 text-xs font-medium bg-gold/10 text-gold rounded-full mb-3 animate-fade-down opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             NOS SERVICES
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             Services digitaux pour booster votre croissance
           </h2>
           <p className="text-gray-600 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
@@ -142,7 +142,7 @@ const Services = () => {
         </Carousel>
 
         {/* Navigation buttons */}
-        <div className="flex justify-center items-center gap-4 mt-6 animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
+        <div className="flex justify-center items-center gap-4 mt-4 animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
           <button
             onClick={() => api?.scrollPrev()}
             className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
@@ -175,7 +175,7 @@ const Services = () => {
             <ChevronRight size={18} />
           </button>
         </div>
-        <div className="mt-16 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
+        <div className="mt-8 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
           <Link 
             to="/services" 
             className="inline-block px-6 py-3 border border-black hover:bg-black hover:text-white transition-colors duration-300 rounded-full"
