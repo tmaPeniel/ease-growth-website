@@ -185,7 +185,7 @@ const ContactForm = () => {
               Prendre rendez-vous
             </button>
           </DialogTrigger>
-          <DialogContent className="max-w-4xl h-[80vh]">
+          <DialogContent className="max-w-4xl h-[600px]">
             <DialogHeader>
               <DialogTitle>Réserver un créneau</DialogTitle>
             </DialogHeader>
