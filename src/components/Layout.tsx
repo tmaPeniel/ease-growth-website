@@ -2,12 +2,17 @@
 import { ReactNode, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Breadcrumb from "./Breadcrumb";
+import useWebVitals from "../hooks/useWebVitals";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  // Monitor Web Vitals
+  useWebVitals();
+  
   useEffect(() => {
     const handleScroll = () => {
       const elements = document.querySelectorAll('.animate-on-scroll');
@@ -34,6 +39,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <Breadcrumb />
       <main className="flex-grow">
         {children}
       </main>

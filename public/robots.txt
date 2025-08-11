@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Allow: /
+
+Sitemap: https://easegrowth.fr/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1

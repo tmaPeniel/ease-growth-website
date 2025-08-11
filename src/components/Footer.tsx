@@ -23,7 +23,9 @@ const Footer = () => {
   const utilityLinks = [
     { name: "Portfolio", path: "/portfolio" },
     { name: "À propos", path: "/about" },
-    { name: "Contact", path: "/contact" }
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
+    { name: "Plan du site", path: "/sitemap" }
   ];
 
   return (

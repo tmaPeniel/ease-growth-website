@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import MainService from "../components/MainService";
 import AdditionalService from "../components/AdditionalService";
 import ServicesHero from "../components/ServicesHero";
+import SEOHead from "../components/SEOHead";
 
 // Import images
 import webCreationImg from "../assets/web-creation-service.jpg";
@@ -144,6 +145,11 @@ const ServicesPage = () => {
 
   return (
     <Layout>
+      <SEOHead 
+        title="Services Web & Formation Digitale | EASE GROWTH"
+        description="Découvrez nos services de création de sites web, développement d'applications, formations digitales et solutions de transformation numérique sur mesure."
+        keywords="services web, création site internet, développement application, formation digitale, transformation numérique, agence web"
+      />
       {/* Hero Section */}
       <ServicesHero />
 
