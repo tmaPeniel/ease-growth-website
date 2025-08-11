@@ -1,7 +1,8 @@
 
-import { Monitor, BookOpen, BarChart, Smartphone, Cloud } from "lucide-react";
+import { Monitor, BookOpen, BarChart, Smartphone, Cloud, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 // Import images
 import webCreationImg from "../assets/web-creation-service.jpg";
@@ -59,6 +60,22 @@ const services = [
 ];
 
 const Services = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
@@ -75,6 +92,7 @@ const Services = () => {
         </div>
 
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: false,
@@ -123,6 +141,36 @@ const Services = () => {
           <CarouselNext className="hidden lg:flex" />
         </Carousel>
 
+        {/* Navigation buttons for mobile */}
+        <div className="flex justify-center items-center gap-4 mt-8 lg:hidden animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
+          <button
+            onClick={() => api?.scrollPrev()}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
+            aria-label="Carte précédente"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <div className="flex items-center gap-2">
+            {Array.from({ length: count }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index + 1 === current ? 'bg-gold' : 'bg-gray-300'
+                }`}
+                aria-label={`Aller à la carte ${index + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => api?.scrollNext()}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
+            aria-label="Carte suivante"
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+
         {/* Desktop scroll indicators */}
         <div className="hidden lg:flex justify-center mt-6 space-x-2">
           <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -134,7 +182,7 @@ const Services = () => {
             <span>Faites défiler pour voir plus de services</span>
           </div>
         </div>
-        <div className="mt-16 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
+        <div className="mt-16 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}>
           <Link 
             to="/services" 
             className="inline-block px-6 py-3 border border-black hover:bg-black hover:text-white transition-colors duration-300 rounded-full"

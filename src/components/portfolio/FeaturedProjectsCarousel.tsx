@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { type Project } from "@/data/projects";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import FeaturedProjectCard from "./FeaturedProjectCard";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 interface FeaturedProjectsCarouselProps {
   projects: Project[];
 }
@@ -72,12 +73,40 @@ const FeaturedProjectsCarousel = ({
         
       </Carousel>
 
-      {/* Dots */}
-      {snapCount > 1 && <div className="mt-6 flex items-center justify-center gap-2">
-          {Array.from({
-        length: snapCount
-      }).map((_, i) => <button key={i} onClick={() => api?.scrollTo(i)} aria-label={`Aller au slide ${i + 1}`} className={`h-2 rounded-full transition-all duration-300 ${i === selectedIndex ? "w-6 bg-black" : "w-2 bg-black/30 hover:bg-black/50"}`} />)}
-        </div>}
+      {/* Navigation buttons */}
+      <div className="flex justify-center items-center gap-4 mt-6">
+        <button
+          onClick={() => api?.scrollPrev()}
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
+          aria-label="Projet précédent"
+        >
+          <ChevronLeft size={18} />
+        </button>
+
+        {/* Dots */}
+        {snapCount > 1 && (
+          <div className="flex items-center gap-2">
+            {Array.from({ length: snapCount }).map((_, i) => (
+              <button 
+                key={i} 
+                onClick={() => api?.scrollTo(i)} 
+                aria-label={`Aller au slide ${i + 1}`} 
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === selectedIndex ? "w-6 bg-black" : "w-2 bg-black/30 hover:bg-black/50"
+                }`} 
+              />
+            ))}
+          </div>
+        )}
+
+        <button
+          onClick={() => api?.scrollNext()}
+          className="flex items-center justify-center w-10 h-10 rounded-full border border-black/20 hover:bg-black hover:text-white transition-colors"
+          aria-label="Projet suivant"
+        >
+          <ChevronRight size={18} />
+        </button>
+      </div>
     </div>;
 };
 export default FeaturedProjectsCarousel;
