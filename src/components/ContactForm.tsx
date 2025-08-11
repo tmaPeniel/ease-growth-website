@@ -186,7 +186,7 @@ const ContactForm = () => {
             </button>
           </DialogTrigger>
           <DialogContent className="max-w-5xl h-[700px] p-0 overflow-hidden bg-gradient-to-br from-white to-gray-50 border-none shadow-2xl">
-            <DialogHeader className="px-8 pt-8 pb-4 bg-gradient-to-r from-primary to-primary/80 text-white">
+            <DialogHeader className="px-6 pt-6 pb-3 bg-gradient-to-r from-primary to-primary/80 text-white">
               <DialogTitle className="text-2xl font-bold flex items-center gap-3">
                 <Calendar className="w-6 h-6" />
                 Réservez votre consultation gratuite
