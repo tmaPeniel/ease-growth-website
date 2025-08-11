@@ -11,10 +11,10 @@ const ServicesHero = () => {
             🚀 NOS SERVICES DIGITAUX
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Services Web Rouen : Développement et Référencement SEO
+            Booster la Croissance de Votre Entreprise
           </h1>
           <p className="text-lg text-gray-600 mb-8 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Notre agence web à Rouen accompagne les PME et startups de Normandie dans leur transformation digitale. Création de sites internet sur mesure, applications web PWA, référencement SEO et formation développement web pour propulser votre entreprise vers le succès.
+            Nous accompagnons les startups, PME et grandes entreprises dans leur transformation digitale. Notre mission est de propulser votre croissance grâce à des solutions web sur mesure, innovantes, performantes et alignées avec vos objectifs d'affaires.
           </p>
           <Link 
             to="/contact" 

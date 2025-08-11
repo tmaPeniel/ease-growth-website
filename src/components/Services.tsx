@@ -76,13 +76,13 @@ const Services = () => {
           animationDelay: '0.4s',
           animationFillMode: 'forwards'
         }}>
-            Services Web à Rouen : Développement et Référencement SEO
+            Services digitaux pour booster votre croissance
           </h2>
           <p className="text-gray-600 animate-fade-down opacity-0" style={{
           animationDelay: '0.6s',
           animationFillMode: 'forwards'
         }}>
-            Notre agence web Rouen propose des solutions complètes : création de sites internet, applications web PWA, référencement SEO et formation développement web pour propulser votre entreprise.
+            Découvrez nos services digitaux conçus pour répondre aux enjeux actuels du marché et propulser votre transformation digitale.
           </p>
         </div>
 

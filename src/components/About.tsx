@@ -19,10 +19,10 @@ const About = () => {
               À PROPOS DE NOUS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-              Agence Web Rouen : Expertise en Développement Web Sur Mesure
+              Expertise et créativité au service de votre réussite
             </h2>
             <p className="text-gray-600 mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-              EASE GROWTH est votre agence web à Rouen spécialisée dans la création de sites internet sur mesure, le référencement SEO et la formation en développement web. Notre équipe de professionnels passionnés accompagne les entreprises locales dans leur transformation digitale.
+              EASE GROWTH est une agence web spécialisée dans la création de sites internet et la formation dans les technologie du web. Notre équipe de professionnels passionnés met son expertise au service de votre réussite.
             </p>
             <p className="text-gray-600 mb-8 animate-fade-down opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               Nous croyons qu'un site web performant doit être à la fois esthétique et fonctionnel, tout en reflétant l'identité unique de votre entreprise. C'est pourquoi nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et créer des solutions sur mesure.

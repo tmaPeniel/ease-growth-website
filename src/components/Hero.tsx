@@ -69,11 +69,11 @@ const Hero = () => {
           </span>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Agence Web Rouen : <br /> <span className="text-gold">Création de Sites Internet Sur Mesure</span>
+            Propulsez votre entreprise <br /> <span className="text-gold">vers de nouveaux sommets</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Spécialiste en développement web sur mesure et référencement SEO à Rouen. Nous accompagnons les PME et startups dans leur transformation digitale avec des solutions innovantes et performantes.
+            Nous créons des sites web professionnels et des stratégies digitales pour votre croissance et succès en ligne sans pression.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-down opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
