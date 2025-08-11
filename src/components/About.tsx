@@ -14,21 +14,21 @@ const About = () => {
     <section id="about" className="section-padding overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="animate-on-scroll order-2 lg:order-1">
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-gold/10 text-gold rounded-full mb-3">
+          <div className="order-2 lg:order-1">
+            <span className="inline-block px-3 py-1 text-xs font-medium bg-gold/10 text-gold rounded-full mb-3 animate-fade-down opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               À PROPOS DE NOUS
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               Expertise et créativité au service de votre réussite
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
               EASE GROWTH est une agence web spécialisée dans la création de sites internet et la formation dans les technologie du web. Notre équipe de professionnels passionnés met son expertise au service de votre réussite.
             </p>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-8 animate-fade-down opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               Nous croyons qu'un site web performant doit être à la fois esthétique et fonctionnel, tout en reflétant l'identité unique de votre entreprise. C'est pourquoi nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et créer des solutions sur mesure.
             </p>
 
-            <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
               {strengths.map((strength, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="mt-0.5 bg-gold/10 rounded-full p-1">
@@ -41,13 +41,13 @@ const About = () => {
 
             <Link
               to="/about"
-              className="inline-block px-6 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full"
+              className="inline-block px-6 py-3 bg-black text-white hover:bg-gold hover:text-black transition-colors duration-300 rounded-full animate-fade-in opacity-0" style={{ animationDelay: '1.2s', animationFillMode: 'forwards' }}
             >
               En savoir plus sur nous
             </Link>
           </div>
 
-          <div className="relative animate-on-scroll order-1 lg:order-2">
+          <div className="relative order-1 lg:order-2 animate-fade-in opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             <div className="relative overflow-hidden rounded-2xl bg-black/5 aspect-[4/3]">
               {/* Decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-gold/10 to-transparent"></div>

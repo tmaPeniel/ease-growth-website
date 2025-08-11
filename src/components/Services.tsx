@@ -62,14 +62,14 @@ const Services = () => {
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-gold/10 text-gold rounded-full mb-3">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-gold/10 text-gold rounded-full mb-3 animate-fade-down opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             NOS SERVICES
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             Services digitaux pour booster votre croissance
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
             Découvrez nos services digitaux conçus pour répondre aux enjeux actuels du marché et propulser votre transformation digitale.
           </p>
         </div>
@@ -79,7 +79,7 @@ const Services = () => {
             align: "start",
             loop: false,
           }}
-          className="w-full animate-on-scroll"
+          className="w-full animate-fade-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}
         >
           <CarouselContent className="-ml-2 md:-ml-3 px-4 md:px-6 py-4 md:py-6">
             {services.map((service, index) => (
@@ -134,7 +134,7 @@ const Services = () => {
             <span>Faites défiler pour voir plus de services</span>
           </div>
         </div>
-        <div className="mt-16 text-center animate-on-scroll">
+        <div className="mt-16 text-center animate-fade-in opacity-0" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
           <Link 
             to="/services" 
             className="inline-block px-6 py-3 border border-black hover:bg-black hover:text-white transition-colors duration-300 rounded-full"

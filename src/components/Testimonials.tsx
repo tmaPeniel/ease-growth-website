@@ -52,19 +52,19 @@ const Testimonials = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-white/10 text-gold rounded-full mb-3 backdrop-blur-sm">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-white/10 text-gold rounded-full mb-3 backdrop-blur-sm animate-fade-down opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             TÉMOIGNAGES
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white animate-fade-down opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             Ce que disent nos clients
           </h2>
-          <p className="text-gray-300">
+          <p className="text-gray-300 animate-fade-down opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
             Découvrez les expériences de ceux qui nous ont fait confiance pour leurs projets web.
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-5xl mx-auto animate-fade-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
           <div className="flex flex-col items-center py-8 px-4 md:px-8">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <Quote className="w-16 h-16 text-gold/20" />
