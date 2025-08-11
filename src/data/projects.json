@@ -91,7 +91,7 @@
     "client": "FI Normandie",
     "year": "2025",
     "description": "Site vitrine pour un groupe communautaire.",
-    "image": "assets/FILogo.jpg",
+    "image": "lovable-uploads/FILogo.jpg",
     "link": "https://finormandie.lovable.app/",
     "technologies": ["React", "TypeScript", "Tailwind CSS", "Vite", "GitHub"],
     "challenge": "Concevoir un site qui met en avant les groupes et permet aux membres de s'inscrire.",
