@@ -52,7 +52,7 @@ const Breadcrumb = () => {
   const breadcrumbs = generateBreadcrumbs();
 
   // Don't show breadcrumb on homepage
-  if (location.pathname === '/') {
+  if (location.pathname !== '/') {
     return null;
   }
 
