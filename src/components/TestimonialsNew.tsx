@@ -46,7 +46,7 @@ const TestimonialsNew = () => {
       title="Ce que disent nos clients"
       description="Découvrez les expériences de ceux qui nous ont fait confiance pour leurs projets web."
       testimonials={testimonials}
-      className="bg-black text-white"
+      className="bg-primary text-primary-foreground"
     />
   )
 }
